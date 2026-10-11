@@ -15,7 +15,7 @@
             --gray-100: #f1f5f9;
             --gray-200: #e2e8f0;
             --gray-300: #cbd5e1;
-            --gray-600: #475569;
+            --gray-600: #64748b;
             --gray-800: #1e293b;
             --gray-900: #0f172a;
             --red-500: #ef4444;
@@ -31,18 +31,17 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--gray-50);
+            background-color: #f5f5f5;
             color: var(--gray-800);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        /* Utility classes */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 12px;
         }
 
         /* Header */
@@ -58,34 +57,34 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 76px;
+            height: 70px;
         }
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             cursor: pointer;
         }
         .logo-icon {
-            width: 42px;
-            height: 42px;
+            width: 38px;
+            height: 38px;
             background: linear-gradient(135deg, #2563eb, #4f46e5);
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 20px;
-            box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37,99,235,0.2);
         }
         .logo-text h1 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--gray-900);
         }
         .logo-text p {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--gray-600);
         }
 
@@ -93,16 +92,16 @@
         .search-box {
             flex: 1;
             max-width: 450px;
-            margin: 0 24px;
+            margin: 0 16px;
             position: relative;
         }
         .search-box input {
             width: 100%;
-            padding: 12px 16px 12px 42px;
+            padding: 10px 14px 10px 38px;
             background: var(--gray-100);
             border: 1px solid transparent;
-            border-radius: 12px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             outline: none;
             transition: all 0.2s;
         }
@@ -113,11 +112,11 @@
         }
         .search-icon {
             position: absolute;
-            left: 14px;
+            left: 12px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--gray-600);
-            font-size: 16px;
+            font-size: 14px;
         }
 
         /* Buttons */
@@ -125,10 +124,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 14px;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             border: none;
@@ -138,7 +137,7 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+            box-shadow: 0 2px 8px rgba(37,99,235,0.25);
         }
         .btn-primary:hover {
             background: var(--primary-dark);
@@ -162,65 +161,56 @@
         .hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: white;
-            padding: 60px 20px;
-            margin-bottom: 32px;
-            border-radius: 0 0 24px 24px;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 16px;
+            margin-bottom: 24px;
+            border-radius: 0 0 20px 20px;
         }
         .hero-inner {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
-        .hero-content {
-            max-width: 650px;
         }
         .hero-tag {
             display: inline-block;
-            padding: 6px 14px;
+            padding: 4px 12px;
             background: rgba(59, 130, 246, 0.25);
             border: 1px solid rgba(59, 130, 246, 0.4);
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: #93c5fd;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .hero h2 {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
         .hero p {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--gray-300);
-            line-height: 1.5;
-            margin-bottom: 24px;
+            line-height: 1.4;
+            margin-bottom: 16px;
         }
 
         /* Categories Filter */
         .categories-bar {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             overflow-x: auto;
-            padding-bottom: 12px;
-            margin-bottom: 24px;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
             scrollbar-width: none;
         }
         .categories-bar::-webkit-scrollbar {
             display: none;
         }
         .cat-btn {
-            padding: 8px 16px;
+            padding: 6px 14px;
             background: white;
             border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             font-weight: 500;
             color: var(--gray-600);
             cursor: pointer;
@@ -231,7 +221,7 @@
             background: var(--primary);
             color: white;
             border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+            box-shadow: 0 2px 8px rgba(37,99,235,0.25);
         }
         .cat-btn:hover:not(.active) {
             background: var(--gray-100);
@@ -242,133 +232,156 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         .section-header h3 {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--gray-900);
         }
         .section-header p {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--gray-600);
         }
         select.sort-select {
-            padding: 10px 14px;
+            padding: 8px 12px;
             background: white;
             border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             color: var(--gray-800);
             outline: none;
             cursor: pointer;
         }
 
-        /* Products Grid */
+        /* Products Grid - Mercado Livre Style (Compact & Side by side) */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 40px;
         }
+        @media (min-width: 640px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 16px;
+            }
+        }
+
         .product-card {
             background: white;
-            border: 1px solid var(--gray-200);
-            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
         .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            border-color: var(--gray-300);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            border-color: #cbd5e1;
         }
         .product-img-wrap {
             position: relative;
-            background: var(--gray-100);
+            background: #fff;
             aspect-ratio: 1;
             overflow: hidden;
             cursor: pointer;
+            border-bottom: 1px solid #f1f5f9;
         }
         .product-img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.3s;
         }
         .product-card:hover .product-img-wrap img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
         .badge {
             position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--red-500);
+            top: 8px;
+            left: 8px;
+            background: #e11d48;
             color: white;
-            padding: 4px 10px;
-            font-size: 11px;
+            padding: 3px 6px;
+            font-size: 9px;
             font-weight: 700;
-            border-radius: 8px;
+            border-radius: 6px;
             text-transform: uppercase;
-            box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
         }
         .cat-tag {
             position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(15, 23, 42, 0.75);
+            bottom: 8px;
+            left: 8px;
+            background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(4px);
             color: white;
-            padding: 4px 10px;
-            font-size: 11px;
+            padding: 2px 6px;
+            font-size: 9px;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 4px;
         }
         .product-body {
-            padding: 16px;
+            padding: 10px;
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .product-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--gray-900);
-            line-height: 1.4;
-            margin-bottom: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-800);
+            line-height: 1.3;
+            margin-bottom: 8px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             cursor: pointer;
         }
+        @media (min-width: 640px) {
+            .product-title {
+                font-size: 13px;
+            }
+        }
         .product-title:hover {
             color: var(--primary);
         }
         .product-price-area {
-            margin-bottom: 16px;
+            margin-bottom: 8px;
         }
         .old-price {
-            font-size: 12px;
-            color: var(--gray-600);
+            font-size: 10px;
+            color: #94a3b8;
             text-decoration: line-through;
-            margin-right: 8px;
+            display: block;
         }
         .current-price {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 800;
-            color: var(--primary);
+            color: var(--gray-900);
+        }
+        @media (min-width: 640px) {
+            .current-price {
+                font-size: 17px;
+            }
         }
 
         /* Footer */
         footer {
             background: var(--gray-900);
             color: var(--gray-300);
-            padding: 40px 20px;
+            padding: 30px 16px;
             margin-top: auto;
             border-top: 1px solid #1e293b;
         }
@@ -377,60 +390,57 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            md-flex-direction: row;
-            justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
             text-align: center;
         }
         .footer-disclaimer {
             max-width: 600px;
-            font-size: 12px;
+            font-size: 11px;
             color: #94a3b8;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         /* Admin Dashboard Styles */
         .admin-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 30px 16px;
             width: 100%;
         }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
         }
         .stat-card {
             background: white;
-            padding: 24px;
-            border-radius: 20px;
+            padding: 18px;
+            border-radius: 16px;
             border: 1px solid var(--gray-200);
             display: flex;
             align-items: center;
-            gap: 16px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            gap: 14px;
         }
         .stat-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 14px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             background: var(--primary-light);
             color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 20px;
         }
         .stat-info p {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--gray-600);
             font-weight: 600;
         }
         .stat-info h4 {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--gray-900);
         }
@@ -438,14 +448,14 @@
         /* Tables */
         .table-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 16px;
             border: 1px solid var(--gray-200);
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            margin-bottom: 40px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
         }
         .table-header {
-            padding: 20px 24px;
+            padding: 16px 20px;
             border-bottom: 1px solid var(--gray-200);
             display: flex;
             justify-content: space-between;
@@ -458,18 +468,17 @@
         }
         th {
             background: var(--gray-50);
-            padding: 14px 20px;
+            padding: 12px 16px;
             font-size: 11px;
             font-weight: 700;
             color: var(--gray-600);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             border-bottom: 1px solid var(--gray-200);
         }
         td {
-            padding: 16px 20px;
+            padding: 14px 16px;
             border-bottom: 1px solid var(--gray-200);
-            font-size: 14px;
+            font-size: 13px;
             vertical-align: middle;
         }
         tr:hover td {
@@ -486,23 +495,23 @@
             align-items: center;
             justify-content: center;
             z-index: 100;
-            padding: 20px;
+            padding: 16px;
         }
         .modal-card {
             background: white;
-            border-radius: 24px;
+            border-radius: 20px;
             width: 100%;
-            max-width: 550px;
+            max-width: 500px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            animation: modalIn 0.25s ease-out;
+            animation: modalIn 0.2s ease-out;
         }
         @keyframes modalIn {
-            from { opacity: 0; transform: translateY(20px) scale(0.95); }
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
         .modal-header {
-            padding: 20px 24px;
+            padding: 16px 20px;
             background: var(--gray-50);
             border-bottom: 1px solid var(--gray-200);
             display: flex;
@@ -510,12 +519,12 @@
             align-items: center;
         }
         .modal-body {
-            padding: 24px;
+            padding: 20px;
             max-height: 75vh;
             overflow-y: auto;
         }
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
         .form-group label {
             display: block;
@@ -523,15 +532,15 @@
             font-weight: 700;
             color: var(--gray-600);
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .form-control {
             width: 100%;
-            padding: 12px 16px;
+            padding: 10px 14px;
             background: var(--gray-50);
             border: 1px solid var(--gray-300);
-            border-radius: 12px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             outline: none;
             transition: all 0.2s;
         }
@@ -545,20 +554,7 @@
         .text-center { text-align: center; }
         .flex { display: flex; }
         .gap-2 { gap: 8px; }
-        .mt-4 { margin-top: 16px; }
-
-        @media (max-width: 768px) {
-            .hero-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero h2 {
-                font-size: 28px;
-            }
-            .search-box {
-                margin: 0 12px;
-            }
-        }
+        .mt-4 { margin-top: 14px; }
     </style>
 </head>
 <body>
@@ -570,14 +566,14 @@
                 <div class="logo-icon">🛍️</div>
                 <div class="logo-text">
                     <h1 id="brandTitle">MegaOfertas</h1>
-                    <p id="brandTagline">Os melhores achados e links de afiliados</p>
+                    <p id="brandTagline">Achados & Ofertas</p>
                 </div>
             </div>
 
-            <!-- Search Bar (Store View) -->
+            <!-- Search Bar -->
             <div class="search-box" id="searchContainer">
                 <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="Buscar produtos, marcas, categorias..." oninput="handleSearch(event)">
+                <input type="text" id="searchInput" placeholder="Buscar produtos..." oninput="handleSearch(event)">
             </div>
 
             <!-- Nav Actions -->
@@ -598,8 +594,8 @@
     <footer id="footerSection">
         <div class="container footer-inner">
             <div class="flex gap-2" style="align-items: center;">
-                <div class="logo-icon" style="width:36px;height:36px;font-size:16px;">🛍️</div>
-                <span style="font-weight:700;font-size:16px;" id="footerBrandName">MegaOfertas</span>
+                <div class="logo-icon" style="width:32px;height:32px;font-size:14px;">🛍️</div>
+                <span style="font-weight:700;font-size:15px;" id="footerBrandName">MegaOfertas</span>
             </div>
             <div class="footer-disclaimer" id="footerDisclaimerText">
                 Este site participa de programas de afiliados (Amazon, Shopee, etc.). Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.
@@ -610,20 +606,20 @@
     <!-- MODALS -->
     <!-- Admin Login Modal -->
     <div id="loginModal" class="modal-overlay hidden">
-        <div class="modal-card" style="max-width: 380px; text-align: center;">
+        <div class="modal-card" style="max-width: 360px; text-align: center;">
             <div class="modal-header">
                 <h3>Painel Administrativo</h3>
-                <button class="btn btn-light" style="padding: 6px 10px;" onclick="closeModals()">✕</button>
+                <button class="btn btn-light" style="padding: 4px 8px;" onclick="closeModals()">✕</button>
             </div>
             <div class="modal-body">
-                <div style="font-size: 36px; margin-bottom: 12px;">🔐</div>
-                <p style="font-size: 13px; color: var(--gray-600); margin-bottom: 20px;">Digite a senha de acesso para gerenciar seus links.</p>
+                <div style="font-size: 32px; margin-bottom: 10px;">🔐</div>
+                <p style="font-size: 12px; color: var(--gray-600); margin-bottom: 16px;">Digite a senha de acesso para gerenciar seus links.</p>
                 <form onsubmit="handleLogin(event)">
                     <div class="form-group">
                         <input type="password" id="loginPasswordInput" class="form-control text-center" placeholder="Senha (padrão: admin123)" required>
                     </div>
-                    <p id="loginErrorMsg" class="hidden" style="color: var(--red-500); font-size: 12px; margin-bottom: 12px;">Senha incorreta. Tente novamente.</p>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar no Painel</button>
+                    <p id="loginErrorMsg" class="hidden" style="color: var(--red-500); font-size: 11px; margin-bottom: 10px;">Senha incorreta. Tente novamente.</p>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
                 </form>
             </div>
         </div>
@@ -634,7 +630,7 @@
         <div class="modal-card">
             <div class="modal-header">
                 <h3 id="productModalTitle">Adicionar Novo Produto</h3>
-                <button class="btn btn-light" style="padding: 6px 10px;" onclick="closeModals()">✕</button>
+                <button class="btn btn-light" style="padding: 4px 8px;" onclick="closeModals()">✕</button>
             </div>
             <div class="modal-body">
                 <form onsubmit="saveProduct(event)">
@@ -656,9 +652,7 @@
                     <div class="flex gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
                         <div class="form-group">
                             <label>Categoria</label>
-                            <select id="prodCategory" class="form-control">
-                                <!-- Filled by JS -->
-                            </select>
+                            <select id="prodCategory" class="form-control"></select>
                         </div>
                         <div class="form-group">
                             <label>Selo / Tag (Ex: -30% OFF)</label>
@@ -684,42 +678,41 @@
 
     <!-- Quick View Modal -->
     <div id="quickModal" class="modal-overlay hidden">
-        <div class="modal-card" style="max-width: 600px; display: flex; flex-direction: row; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px; background: var(--gray-100); position: relative;">
+        <div class="modal-card" style="max-width: 580px; display: flex; flex-direction: row; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 220px; background: var(--gray-100); position: relative;">
                 <img id="quickImg" src="" style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1;" alt="">
                 <span id="quickBadge" class="badge"></span>
             </div>
-            <div style="flex: 1; min-width: 250px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="flex: 1; min-width: 220px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span id="quickCategory" style="font-size: 11px; font-weight: 700; background: var(--primary-light); color: var(--primary); padding: 4px 10px; border-radius: 8px;"></span>
-                        <button class="btn btn-light" style="padding: 4px 8px;" onclick="closeModals()">✕</button>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span id="quickCategory" style="font-size: 10px; font-weight: 700; background: var(--primary-light); color: var(--primary); padding: 3px 8px; border-radius: 6px;"></span>
+                        <button class="btn btn-light" style="padding: 2px 6px;" onclick="closeModals()">✕</button>
                     </div>
-                    <h3 id="quickTitle" style="font-size: 18px; font-weight: 800; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4;"></h3>
-                    <div style="margin-bottom: 20px;">
+                    <h3 id="quickTitle" style="font-size: 16px; font-weight: 800; color: var(--gray-900); margin-bottom: 10px; line-height: 1.3;"></h3>
+                    <div style="margin-bottom: 16px;">
                         <span id="quickOldPrice" class="old-price"></span>
-                        <span id="quickPrice" class="current-price"></span>
+                        <span id="quickPrice" class="current-price" style="font-size: 20px;"></span>
                     </div>
-                    <p style="font-size: 12px; color: var(--gray-600); line-height: 1.5; margin-bottom: 20px;">Produto verificado com link de afiliado oficial. Clique abaixo para abrir na loja parceira.</p>
+                    <p style="font-size: 11px; color: var(--gray-600); line-height: 1.4; margin-bottom: 16px;">Produto verificado com link de afiliado oficial. Clique abaixo para abrir na loja parceira.</p>
                 </div>
-                <a id="quickBuyBtn" href="#" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="trackClickFromQuick()">Ir para a Loja Oficial ➔</a>
+                <a id="quickBuyBtn" href="#" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="trackClickFromQuick()">Ver Oferta na Loja ➔</a>
             </div>
         </div>
     </div>
 
     <!-- JavaScript Application Core -->
     <script>
-        // State
         let state = {
-            currentView: 'store', // 'store' or 'admin'
-            adminTab: 'products', // 'products', 'stats', 'settings'
+            currentView: 'store',
+            adminTab: 'products',
             searchQuery: '',
             selectedCategory: 'Todos',
             sortBy: 'newest',
             categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes', 'Livros'],
             settings: {
                 siteName: 'MegaOfertas',
-                tagline: 'Os melhores achados e links de afiliados da internet',
+                tagline: 'Achados & Ofertas',
                 heroTitle: 'Achados Imperdíveis & Ofertas Diárias',
                 heroSubtitle: 'Selecionei os melhores produtos com desconto para você economizar tempo e dinheiro.',
                 heroBanner: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1600&q=80',
@@ -774,7 +767,6 @@
             quickProductId: null
         };
 
-        // Load Storage
         function initApp() {
             const savedProds = localStorage.getItem('aff_products');
             const savedSets = localStorage.getItem('aff_settings');
@@ -805,7 +797,6 @@
             state.currentView = view;
             const searchContainer = document.getElementById('searchContainer');
             const adminBtn = document.getElementById('adminBtn');
-            const adminBtnText = document.getElementById('adminBtnText');
 
             if (view === 'admin') {
                 searchContainer.classList.add('hidden');
@@ -840,14 +831,12 @@
             renderStoreProducts();
         }
 
-        // Render Main
         function render() {
             updateHeaderBranding();
             const main = document.getElementById('mainContent');
 
             if (state.currentView === 'store') {
                 main.innerHTML = `
-                    <!-- Hero Banner -->
                     <section class="hero">
                         <div class="hero-inner">
                             <div class="hero-content">
@@ -860,14 +849,12 @@
                     </section>
 
                     <div id="vitrine" class="container">
-                        <!-- Categories Bar -->
                         <div class="categories-bar">
                             ${state.categories.map(cat => `
                                 <button class="cat-btn ${state.selectedCategory === cat ? 'active' : ''}" onclick="selectCategory('${cat}')">${cat}</button>
                             `).join('')}
                         </div>
 
-                        <!-- Header -->
                         <div class="section-header">
                             <div>
                                 <h3>${state.selectedCategory === 'Todos' ? 'Todos os Produtos' : state.selectedCategory}</h3>
@@ -883,32 +870,28 @@
                             </div>
                         </div>
 
-                        <!-- Products Grid -->
                         <div id="productsGrid" class="products-grid"></div>
                     </div>
                 `;
                 renderStoreProducts();
             } else {
-                // Admin View
                 const totalClicks = state.products.reduce((acc, p) => acc + (p.clicks || 0), 0);
                 main.innerHTML = `
                     <div class="admin-container">
-                        <div class="section-header" style="margin-bottom: 24px;">
+                        <div class="section-header" style="margin-bottom: 20px;">
                             <div>
                                 <h2>Painel Administrativo</h2>
-                                <p>Gerencie produtos, links de afiliado e configurações da sua vitrine.</p>
+                                <p>Gerencie produtos, links de afiliado e configurações.</p>
                             </div>
-                            <button class="btn btn-danger" onclick="logoutAdmin()">Sair do Painel</button>
+                            <button class="btn btn-danger" onclick="logoutAdmin()">Sair</button>
                         </div>
 
-                        <!-- Admin Tabs -->
-                        <div class="flex gap-2" style="margin-bottom: 24px;">
+                        <div class="flex gap-2" style="margin-bottom: 20px;">
                             <button class="btn ${state.adminTab === 'products' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('products')">📦 Produtos</button>
                             <button class="btn ${state.adminTab === 'stats' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('stats')">📊 Estatísticas</button>
                             <button class="btn ${state.adminTab === 'settings' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('settings')">⚙️ Configurações</button>
                         </div>
 
-                        <!-- Stats Cards -->
                         <div class="stats-grid">
                             <div class="stat-card">
                                 <div class="stat-icon">📦</div>
@@ -933,11 +916,10 @@
                             </div>
                         </div>
 
-                        <!-- TAB 1: PRODUCTS -->
                         <div id="adminTabProducts" class="${state.adminTab === 'products' ? '' : 'hidden'}">
                             <div class="table-card">
                                 <div class="table-header">
-                                    <h3>Gerenciamento de Produtos & Links</h3>
+                                    <h3>Gerenciar Produtos</h3>
                                     <button class="btn btn-primary" onclick="openAddProductModal()">+ Novo Produto</button>
                                 </div>
                                 <div style="overflow-x: auto;">
@@ -957,23 +939,23 @@
                                                 <tr>
                                                     <td>
                                                         <div class="flex gap-2" style="align-items: center;">
-                                                            <img src="${p.image}" style="width: 42px; height: 42px; border-radius: 10px; object-fit: cover;" alt="">
+                                                            <img src="${p.image}" style="width: 36px; height: 36px; border-radius: 8px; object-fit: cover;" alt="">
                                                             <div>
-                                                                <strong style="font-size: 13px; display: block; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</strong>
-                                                                <span style="font-size: 11px; color: var(--red-500);">${p.badge || ''}</span>
+                                                                <strong style="font-size: 12px; display: block; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</strong>
+                                                                <span style="font-size: 10px; color: var(--red-500);">${p.badge || ''}</span>
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td><span style="background: var(--gray-100); padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">${p.category}</span></td>
+                                                    <td><span style="background: var(--gray-100); padding: 3px 6px; border-radius: 6px; font-size: 11px; font-weight: 600;">${p.category}</span></td>
                                                     <td>
                                                         <strong style="color: var(--primary);">${formatCurrency(p.price)}</strong>
-                                                        ${p.oldPrice ? `<div style="font-size: 11px; color: var(--gray-600); text-decoration: line-through;">${formatCurrency(p.oldPrice)}</div>` : ''}
+                                                        ${p.oldPrice ? `<div style="font-size: 10px; color: var(--gray-600); text-decoration: line-through;">${formatCurrency(p.oldPrice)}</div>` : ''}
                                                     </td>
-                                                    <td><span style="background: #ecfdf5; color: var(--emerald-600); font-weight: 700; padding: 4px 8px; border-radius: 6px; font-size: 12px;">${p.clicks || 0} cliques</span></td>
-                                                    <td><a href="${p.link}" target="_blank" style="font-size: 12px; color: var(--primary); max-width: 180px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.link}</a></td>
+                                                    <td><span style="background: #ecfdf5; color: var(--emerald-600); font-weight: 700; padding: 3px 6px; border-radius: 6px; font-size: 11px;">${p.clicks || 0}</span></td>
+                                                    <td><a href="${p.link}" target="_blank" style="font-size: 11px; color: var(--primary); max-width: 150px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.link}</a></td>
                                                     <td style="text-align: right;">
-                                                        <button class="btn btn-light" style="padding: 6px 10px;" onclick="openEditProductModal(${p.id})">✏️</button>
-                                                        <button class="btn btn-danger" style="padding: 6px 10px;" onclick="deleteProduct(${p.id})">🗑️</button>
+                                                        <button class="btn btn-light" style="padding: 4px 8px;" onclick="openEditProductModal(${p.id})">✏️</button>
+                                                        <button class="btn btn-danger" style="padding: 4px 8px;" onclick="deleteProduct(${p.id})">🗑️</button>
                                                     </td>
                                                 </tr>
                                             `).join('')}
@@ -983,22 +965,21 @@
                             </div>
                         </div>
 
-                        <!-- TAB 2: STATS -->
                         <div id="adminTabStats" class="${state.adminTab === 'stats' ? '' : 'hidden'}">
-                            <div class="table-card" style="padding: 24px;">
-                                <h3 style="margin-bottom: 16px;">Produtos Mais Clicados</h3>
-                                <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div class="table-card" style="padding: 20px;">
+                                <h3 style="margin-bottom: 14px; font-size: 16px;">Produtos Mais Clicados</h3>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
                                     ${[...state.products].sort((a,b)=>(b.clicks||0)-(a.clicks||0)).map(p => `
-                                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--gray-50); border-radius: 12px; border: 1px solid var(--gray-200);">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: var(--gray-50); border-radius: 10px; border: 1px solid var(--gray-200);">
                                             <div class="flex gap-2" style="align-items: center;">
-                                                <img src="${p.image}" style="width: 36px; height: 36px; border-radius: 8px; object-fit: cover;" alt="">
+                                                <img src="${p.image}" style="width: 32px; height: 32px; border-radius: 6px; object-fit: cover;" alt="">
                                                 <div>
-                                                    <strong style="font-size: 13px;">${p.title}</strong>
-                                                    <div style="font-size: 11px; color: var(--gray-600);">${p.category}</div>
+                                                    <strong style="font-size: 12px;">${p.title}</strong>
+                                                    <div style="font-size: 10px; color: var(--gray-600);">${p.category}</div>
                                                 </div>
                                             </div>
                                             <div style="text-align: right;">
-                                                <strong style="font-size: 16px; color: var(--primary);">${p.clicks || 0} cliques</strong>
+                                                <strong style="font-size: 14px; color: var(--primary);">${p.clicks || 0} cliques</strong>
                                             </div>
                                         </div>
                                     `).join('')}
@@ -1006,10 +987,9 @@
                             </div>
                         </div>
 
-                        <!-- TAB 3: SETTINGS -->
                         <div id="adminTabSettings" class="${state.adminTab === 'settings' ? '' : 'hidden'}">
-                            <div class="table-card" style="padding: 24px; max-width: 700px;">
-                                <h3 style="margin-bottom: 20px;">Configurações da Vitrine</h3>
+                            <div class="table-card" style="padding: 20px; max-width: 650px;">
+                                <h3 style="margin-bottom: 16px; font-size: 16px;">Configurações</h3>
                                 <form onsubmit="saveSettings(event)">
                                     <div class="form-group">
                                         <label>Nome do Site</label>
@@ -1035,15 +1015,15 @@
                                         <label>Texto de Aviso de Afiliado (Rodapé)</label>
                                         <textarea id="settingDisclaimer" class="form-control" rows="3" required>${state.settings.affiliateDisclaimer}</textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Salvar Configurações</button>
+                                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar Configurações</button>
                                 </form>
 
-                                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--gray-200);">
-                                    <h4 style="font-size: 15px; margin-bottom: 12px;">Backup e Dados</h4>
-                                    <div class="flex gap-2">
-                                        <button class="btn btn-light" onclick="exportBackup()">📥 Exportar Backup (JSON)</button>
+                                <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">
+                                    <h4 style="font-size: 14px; margin-bottom: 10px;">Backup e Dados</h4>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <button class="btn btn-light" onclick="exportBackup()">📥 Exportar JSON</button>
                                         <label class="btn btn-light" style="cursor: pointer;">
-                                            📤 Importar Backup <input type="file" accept=".json" class="hidden" onchange="importBackup(event)">
+                                            📤 Importar JSON <input type="file" accept=".json" class="hidden" onchange="importBackup(event)">
                                         </label>
                                         <button class="btn btn-danger" onclick="resetFactoryData()">🔄 Restaurar Padrões</button>
                                     </div>
@@ -1058,18 +1038,15 @@
         function renderStoreProducts() {
             let list = [...state.products];
 
-            // Category filter
             if (state.selectedCategory !== 'Todos') {
                 list = list.filter(p => p.category === state.selectedCategory);
             }
 
-            // Search filter
             if (state.searchQuery.trim() !== '') {
                 const q = state.searchQuery.toLowerCase();
                 list = list.filter(p => p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
             }
 
-            // Sorting
             if (state.sortBy === 'newest') {
                 list.sort((a, b) => b.id - a.id);
             } else if (state.sortBy === 'price-asc') {
@@ -1088,10 +1065,10 @@
 
             if (list.length === 0) {
                 grid.innerHTML = `
-                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: white; border-radius: 20px; border: 1px solid var(--gray-200);">
-                        <div style="font-size: 48px; margin-bottom: 12px;">🔍</div>
-                        <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Nenhum produto encontrado</h4>
-                        <p style="font-size: 13px; color: var(--gray-600); margin-bottom: 20px;">Tente buscar por outro termo ou categoria.</p>
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px 16px; background: white; border-radius: 12px; border: 1px solid var(--gray-200);">
+                        <div style="font-size: 36px; margin-bottom: 8px;">🔍</div>
+                        <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">Nenhum produto encontrado</h4>
+                        <p style="font-size: 12px; color: var(--gray-600); margin-bottom: 16px;">Tente buscar por outro termo.</p>
                         <button class="btn btn-primary" onclick="state.searchQuery=''; state.selectedCategory='Todos'; render();">Limpar Filtros</button>
                     </div>
                 `;
@@ -1114,8 +1091,8 @@
                                 ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
                                 <span class="current-price">${formatCurrency(p.price)}</span>
                             </div>
-                            <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="trackClick(${p.id})">
-                                Ver Oferta na Loja ➔
+                            <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="trackClick(${p.id})">
+                                Ver Oferta ➔
                             </a>
                         </div>
                     </div>
@@ -1123,7 +1100,6 @@
             `).join('');
         }
 
-        // Modals & Actions
         function openAdminLogin() {
             document.getElementById('loginPasswordInput').value = '';
             document.getElementById('loginErrorMsg').classList.add('hidden');
@@ -1203,13 +1179,11 @@
             const link = document.getElementById('prodLink').value;
 
             if (id) {
-                // Edit
                 const index = state.products.findIndex(p => p.id == id);
                 if (index !== -1) {
                     state.products[index] = { ...state.products[index], title, price, oldPrice, category, badge, image, link };
                 }
             } else {
-                // Add
                 const newId = state.products.length > 0 ? Math.max(...state.products.map(p => p.id)) + 1 : 1;
                 state.products.unshift({
                     id: newId,
@@ -1270,7 +1244,7 @@
         function saveSettings(e) {
             e.preventDefault();
             state.settings.siteName = document.getElementById('settingSiteName').value;
-            state.settings.tagline = document.getElementById('settingTagline').value;
+            state.settings.tagline = document.getElementById('settingTagline'.value) || document.getElementById('settingTagline').value;
             state.settings.heroTitle = document.getElementById('settingHeroTitle').value;
             state.settings.heroSubtitle = document.getElementById('settingHeroSubtitle').value;
             state.settings.heroBanner = document.getElementById('settingHeroBanner').value;
@@ -1318,7 +1292,6 @@
             }
         }
 
-        // Initialize on load
         window.onload = initApp;
     </script>
 </body>
