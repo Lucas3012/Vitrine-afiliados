@@ -19,6 +19,7 @@ let state = {
     sortBy: 'newest',
     currentUser: null,
     isRegisterMode: false,
+    adminTab: 'products',
     categoriesData: [
         {
             name: 'Moda e Acessórios',
@@ -67,7 +68,7 @@ let state = {
         { name: 'Serviços', subcategories: [{ name: 'Manutenção', image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=300&q=80' }] },
         { name: 'Outras categorias', subcategories: [{ name: 'Diversos', image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=300&q=80' }] }
     ],
-    categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes'],
+    categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes', 'Ferramentas'],
     settings: {
         siteName: 'Mega Ofertas',
         tagline: 'Achados & Ofertas',
@@ -84,7 +85,8 @@ let state = {
             category: 'Eletrônicos',
             badge: '45% OFF',
             image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com'
+            link: 'https://mercadolivre.com',
+            clicks: 34
         },
         {
             id: 2,
@@ -94,13 +96,17 @@ let state = {
             category: 'Eletrônicos',
             badge: 'Mais vendido',
             image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com'
+            link: 'https://mercadolivre.com',
+            clicks: 56
         }
     ],
     favorites: []
 };
 
 async function initApp() {
+    const savedProds = localStorage.getItem('aff_products');
+    if (savedProds) state.products = JSON.parse(savedProds);
+
     if (supabaseClient) {
         const { data: { session } } = await supabaseClient.auth.getSession();
         if (session) {
@@ -113,6 +119,10 @@ async function initApp() {
     }
     updateAuthUI();
     render();
+}
+
+function saveToStorage() {
+    localStorage.setItem('aff_products', JSON.stringify(state.products));
 }
 
 function updateAuthUI() {
@@ -171,7 +181,7 @@ async function handleAuthSubmit(e) {
                 options: { data: { full_name: name } }
             });
             if (error) throw error;
-            alert('Cadastro realizado com sucesso! Verifique seu e-mail se necessário.');
+            alert('Cadastro realizado com sucesso! Verifique seu e-mail.');
         } else {
             const { data, error } = await supabaseClient.auth.signInWithPassword({
                 email,
@@ -336,28 +346,98 @@ function render() {
         main.innerHTML = `<div class="admin-container"><h2>🏪 Lojas que Sigo</h2><p style="margin-top:10px;">Acompanhe vitrines parceiras.</p></div>`;
     } else if (state.currentView === 'historico') {
         main.innerHTML = `<div class="admin-container"><h2>🕒 Histórico</h2><p style="margin-top:10px;">Produtos visualizados recentemente.</p></div>`;
-    } else if (state.currentView === 'central-afiliados') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>🔗 Central de Afiliados e Criadores</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Monetize seus links e compartilhe achados com sua audiência.</p>
-                ${!state.currentUser ? `
-                    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px; border: 1px solid var(--gray-200);">
-                        <p>Faça login ou cadastre-se para gerar seus links personalizados de afiliado.</p>
-                        <button class="btn btn-primary" style="margin-top: 12px;" onclick="openAuthModal('login')">Entrar na Conta</button>
-                    </div>
-                ` : `
-                    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px;">
-                        <p>Bem-vindo, <strong>${state.currentUser.email}</strong>! Seus links de rastreio estão ativos.</p>
-                    </div>
-                `}
-            </div>
-        `;
     } else if (state.currentView === 'supermercado') {
         state.selectedCategory = 'Casa & Cozinha';
         switchView('store');
     } else if (state.currentView === 'configuracoes') {
         main.innerHTML = `<div class="admin-container"><h2>⚙️ Configurações</h2><p style="margin-top:10px;">Ajustes de conta e preferências.</p></div>`;
+    } else if (state.currentView === 'central-afiliados') {
+        if (!state.currentUser) {
+            main.innerHTML = `
+                <div class="admin-container" style="text-align: center; padding: 40px 20px;">
+                    <h2>🔗 Central de Afiliados e Criadores</h2>
+                    <p style="margin-top: 10px; color: var(--gray-600); margin-bottom: 20px;">Faça login ou cadastre-se para acessar o painel de gerenciamento de produtos e links de afiliados.</p>
+                    <button class="btn btn-primary" onclick="openAuthModal('login')">Entrar na Conta</button>
+                    <button class="btn btn-light" style="margin-left: 10px;" onclick="openAuthModal('register')">Criar Conta</button>
+                </div>
+            `;
+        } else {
+            const totalClicks = state.products.reduce((acc, p) => acc + (p.clicks || 0), 0);
+            main.innerHTML = `
+                <div class="admin-container">
+                    <div class="section-header" style="margin-bottom: 20px;">
+                        <div>
+                            <h2>🔗 Central de Afiliados e Gerenciador</h2>
+                            <p>Bem-vindo, <strong>${state.currentUser.email}</strong>. Gerencie seus produtos e links.</p>
+                        </div>
+                        <button class="btn btn-danger" style="padding: 6px 12px; font-size: 12px;" onclick="handleLogout()">Sair da Conta</button>
+                    </div>
+
+                    <div class="stats-grid" style="margin-bottom: 20px;">
+                        <div class="stat-card">
+                            <div class="stat-icon">📦</div>
+                            <div class="stat-info">
+                                <p>Total de Produtos</p>
+                                <h4>${state.products.length}</h4>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">👆</div>
+                            <div class="stat-info">
+                                <p>Cliques nos Links</p>
+                                <h4>${totalClicks}</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-card">
+                        <div class="table-header">
+                            <h3>Gerenciar Produtos da Vitrine</h3>
+                            <button class="btn btn-primary" onclick="openAddProductModal()">+ Novo Produto</button>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Categoria</th>
+                                        <th>Preço</th>
+                                        <th>Cliques</th>
+                                        <th>Link de Afiliado</th>
+                                        <th style="text-align: right;">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${state.products.map(p => `
+                                        <tr>
+                                            <td>
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <img src="${p.image}" style="width: 36px; height: 36px; border-radius: 4px; object-fit: cover;" alt="">
+                                                    <div>
+                                                        <strong style="font-size: 12px; display: block; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</strong>
+                                                        <span style="font-size: 10px; color: #d32f2f;">${p.badge || ''}</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span style="background: var(--gray-100); padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: 600;">${p.category}</span></td>
+                                            <td>
+                                                <strong>${formatCurrency(p.price)}</strong>${p.oldPrice ? `<div style="font-size: 10px; color: var(--gray-600); text-decoration: line-through;">${formatCurrency(p.oldPrice)}</div>` : ''}
+                                            </td>
+                                            <td><span style="background: #ecfdf5; color: var(--emerald-600); font-weight: 700; padding: 3px 6px; border-radius: 4px; font-size: 11px;">${p.clicks || 0}</span></td>
+                                            <td><a href="${p.link}" target="_blank" style="font-size: 11px; color: var(--primary); max-width: 140px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.link}</a></td>
+                                            <td style="text-align: right;">
+                                                <button class="btn btn-light" style="padding: 4px 8px;" onclick="openEditProductModal(${p.id})">✏️</button>
+                                                <button class="btn btn-danger" style="padding: 4px 8px;" onclick="deleteProduct(${p.id})">🗑️</button>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
     }
 }
 
@@ -376,10 +456,98 @@ function renderStoreProducts() {
             <div class="product-body">
                 <div class="product-title">${p.title}</div>
                 <div class="current-price">${formatCurrency(p.price)}</div>
-                <a href="${p.link}" target="_blank" class="btn btn-primary" style="width:100%;text-align:center;margin-top:10px;font-size:12px;" onclick="event.stopPropagation()">Ver Oferta</a>
+                <a href="${p.link}" target="_blank" class="btn btn-primary" style="width:100%;text-align:center;margin-top:10px;font-size:12px;" onclick="event.stopPropagation(); trackClick(${p.id})">Ver Oferta</a>
             </div>
         </div>
     `).join('');
+}
+
+function trackClick(id) {
+    const p = state.products.find(item => item.id === id);
+    if (p) {
+        p.clicks = (p.clicks || 0) + 1;
+        saveToStorage();
+    }
+}
+
+function populateCategoryDropdown(selected = '') {
+    const select = document.getElementById('prodCategory');
+    if (!select) return;
+    select.innerHTML = state.categories.filter(c => c !== 'Todos').map(c => `
+        <option value="${c}" ${c === selected ? 'selected' : ''}>${c}</option>
+    `).join('');
+}
+
+function openAddProductModal() {
+    document.getElementById('productModalTitle').innerText = 'Adicionar Novo Produto';
+    document.getElementById('prodId').value = '';
+    document.getElementById('prodTitle').value = '';
+    document.getElementById('prodPrice').value = '';
+    document.getElementById('prodOldPrice').value = '';
+    document.getElementById('prodBadge').value = '';
+    document.getElementById('prodImage').value = '';
+    document.getElementById('prodLink').value = '';
+    populateCategoryDropdown();
+    document.getElementById('productModal').classList.remove('hidden');
+}
+
+function openEditProductModal(id) {
+    const p = state.products.find(item => item.id === id);
+    if (!p) return;
+    document.getElementById('productModalTitle').innerText = 'Editar Produto';
+    document.getElementById('prodId').value = p.id;
+    document.getElementById('prodTitle').value = p.title;
+    document.getElementById('prodPrice').value = p.price;
+    document.getElementById('prodOldPrice').value = p.oldPrice || '';
+    document.getElementById('prodBadge').value = p.badge || '';
+    document.getElementById('prodImage').value = p.image;
+    document.getElementById('prodLink').value = p.link;
+    populateCategoryDropdown(p.category);
+    document.getElementById('productModal').classList.remove('hidden');
+}
+
+function saveProduct(e) {
+    e.preventDefault();
+    const id = document.getElementById('prodId').value;
+    const title = document.getElementById('prodTitle').value;
+    const price = Number(document.getElementById('prodPrice').value);
+    const oldPrice = document.getElementById('prodOldPrice').value ? Number(document.getElementById('prodOldPrice').value) : null;
+    const category = document.getElementById('prodCategory').value;
+    const badge = document.getElementById('prodBadge').value;
+    const image = document.getElementById('prodImage').value;
+    const link = document.getElementById('prodLink').value;
+
+    if (id) {
+        const index = state.products.findIndex(p => p.id == id);
+        if (index !== -1) {
+            state.products[index] = { ...state.products[index], title, price, oldPrice, category, badge, image, link };
+        }
+    } else {
+        const newId = state.products.length > 0 ? Math.max(...state.products.map(p => p.id)) + 1 : 1;
+        state.products.unshift({
+            id: newId,
+            title,
+            price,
+            oldPrice,
+            category,
+            badge,
+            image,
+            link,
+            clicks: 0
+        });
+    }
+
+    saveToStorage();
+    closeModals();
+    render();
+}
+
+function deleteProduct(id) {
+    if (confirm('Tem certeza que deseja excluir este produto?')) {
+        state.products = state.products.filter(p => p.id !== id);
+        saveToStorage();
+        render();
+    }
 }
 
 function openQuickView(id) {
@@ -396,6 +564,7 @@ function openQuickView(id) {
 
 function closeModals() {
     document.getElementById('authModal').classList.add('hidden');
+    document.getElementById('productModal').classList.add('hidden');
     document.getElementById('quickModal').classList.add('hidden');
 }
 
