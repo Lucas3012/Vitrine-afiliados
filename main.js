@@ -99,6 +99,11 @@ function toggleSidebar() {
     overlay.classList.toggle('active');
 }
 
+function setActiveBottomTab(el) {
+    document.querySelectorAll('.bottom-nav-item').forEach(item => item.classList.remove('active'));
+    el.classList.add('active');
+}
+
 function switchView(view) {
     state.currentView = view;
     render();
@@ -271,12 +276,12 @@ function render() {
                     <div class="product-card" style="padding: 20px; text-align: center;">
                         <h4>Mercado Livre Oficial</h4>
                         <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
-                        <span class="badge-tag green" style="display:inline-block;">Seguindo</span>
+                        <span class="ml-badge ml-badge-green" style="display:inline-block;">Seguindo</span>
                     </div>
                     <div class="product-card" style="padding: 20px; text-align: center;">
                         <h4>Amazon Brasil</h4>
                         <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
-                        <span class="badge-tag green" style="display:inline-block;">Seguindo</span>
+                        <span class="ml-badge ml-badge-green" style="display:inline-block;">Seguindo</span>
                     </div>
                 </div>
             </div>

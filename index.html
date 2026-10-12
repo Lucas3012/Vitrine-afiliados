@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACHOO - Vitrine de Ofertas & Afiliados</title>
-    <!-- Google Fonts: Proxima Nova / Inter -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -37,7 +37,6 @@
     <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
     <aside id="leftSidebar" class="sidebar">
         <div class="sidebar-body">
-            <!-- Menu Principal -->
             <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('store')">
                 <span class="sidebar-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -53,7 +52,7 @@
             </a>
 
             <div class="sidebar-divider"></div>
-            <div class="sidebar-section-title">Minha atividade</div>
+            <div class="sidebar-section-title">Minha actividade</div>
 
             <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('compras')">
                 <span class="sidebar-icon">
@@ -126,9 +125,33 @@
     </aside>
 
     <!-- Main Content Area -->
-    <main id="mainContent" style="flex: 1;">
+    <main id="mainContent" style="flex: 1; padding-bottom: 70px;">
         <!-- Injected via JavaScript -->
     </main>
+
+    <!-- Barra de Navegação Inferior Estilo Mercado Livre -->
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-nav-item active" onclick="switchView('store'); setActiveBottomTab(this);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Início</span>
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('store'); setActiveBottomTab(this);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Categorias</span>
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('favoritos'); setActiveBottomTab(this);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Favoritos</span>
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('central-afiliados'); setActiveBottomTab(this);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            <span>Lives e Vídeos</span>
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="toggleSidebar();">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <span>Mais</span>
+        </a>
+    </nav>
 
     <!-- Footer -->
     <footer id="footerSection">
@@ -137,7 +160,7 @@
                 <span style="font-weight:700;font-size:15px;" id="footerBrandName">ACHOO - Mega Ofertas</span>
             </div>
             <div class="footer-disclaimer" id="footerDisclaimerText">
-                Este site participa de programas de afiliados (Amazon, Shopee, Mercado Livre, etc.). Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.
+                Este site participa de programas de afiliados. Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.
             </div>
         </div>
     </footer>
@@ -205,7 +228,7 @@
                         <input type="url" id="prodLink" class="form-control" placeholder="https://mercadolivre.com/... ou link de afiliado" required>
                     </div>
                     <div class="flex gap-2 justify-end mt-4">
-                        <button type="button" class="button btn-light" onclick="closeModals()">Cancelar</button>
+                        <button type="button" class="btn btn-light" onclick="closeModals()">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Salvar Produto</button>
                     </div>
                 </form>
