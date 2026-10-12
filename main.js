@@ -1,10 +1,25 @@
+// CONFIGURAÇÃO DO SUPABASE
+// Substitua pelas credenciais do seu projeto Supabase
+const SUPABASE_URL = ' SUA_URL_DO_SUPABASE_AQUI ';
+const SUPABASE_ANON_KEY = ' SUA_CHAVE_ANON_DO_SUPABASE_AQUI ';
+
+let supabaseClient = null;
+try {
+    if (window.supabase && SUPABASE_URL !== 'SUA_URL_DO_SUPABASE_AQUI') {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    }
+} catch(e) {
+    console.warn('Erro ao inicializar Supabase. Verifique as credenciais.');
+}
+
 let state = {
     currentView: 'store',
     activeCategoryIndex: 0,
-    adminTab: 'products',
     searchQuery: '',
     selectedCategory: 'Todos',
     sortBy: 'newest',
+    currentUser: null,
+    isRegisterMode: false,
     categoriesData: [
         {
             name: 'Moda e Acessórios',
@@ -13,54 +28,19 @@ let state = {
                 { name: 'Malas e Bolsas', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=300&q=80' },
                 { name: 'Roupa Íntima e de Dormir', image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=300&q=80' },
                 { name: 'Calças', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Camisetas e Regatas', image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Aces. Moda', image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Vestidos', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Bermudas e Shorts', image: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Moda Fitness', image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Agasalhos', image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Blusas', image: 'https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Camisas', image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Moda Praia', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Uniformes Trabalho e...', image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Saias', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Leggings', image: 'https://images.unsplash.com/photo-1506629082925-2368c4676df1?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Ternos', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Macacão', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80' }
+                { name: 'Camisetas e Regatas', image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' }
             ]
         },
-        { name: 'Esportes e Fitness', subcategories: [{ name: 'Suplementos', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }, { name: 'Academia', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Joias e Relógios', subcategories: [{ name: 'Relógios', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Beleza e Saúde', subcategories: [{ name: 'Perfumes', image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Celulares e Telefones', subcategories: [{ name: 'Smartphones', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Móveis e Decoração', subcategories: [{ name: 'Salas', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Computação', subcategories: [{ name: 'Notebooks', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Videogames', subcategories: [{ name: 'Consoles', image: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Áudio e Vídeo', subcategories: [{ name: 'Fones', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Acessórios Veículos', subcategories: [{ name: 'Capacetes', image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Veículos', subcategories: [{ name: 'Carros', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Construção', subcategories: [{ name: 'Ferramentas', image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Escritório e Papelaria', subcategories: [{ name: 'Cadernos', image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Eletrodomésticos', subcategories: [{ name: 'Air Fryer', image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Câmeras e Acessórios', subcategories: [{ name: 'Câmeras', image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Brinquedos e...', subcategories: [{ name: 'Bonecos', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Livros', subcategories: [{ name: 'Ficção', image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Alimentos e Bebidas', subcategories: [{ name: 'Cafés', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Bebês', subcategories: [{ name: 'Carrinhos', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Animais de estimação', subcategories: [{ name: 'Rações', image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Instrumentos...', subcategories: [{ name: 'Violões', image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Imóveis', subcategories: [{ name: 'Casas', image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Serviços', subcategories: [{ name: 'Manutenção', image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Outras categorias', subcategories: [{ name: 'Diversos', image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=300&q=80' }] }
+        { name: 'Esportes e Fitness', subcategories: [{ name: 'Suplementos', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Celulares e Telefones', subcategories: [{ name: 'Smartphones', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80' }] }
     ],
-    categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes', 'Ferramentas'],
+    categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes'],
     settings: {
         siteName: 'Mega Ofertas',
         tagline: 'Achados & Ofertas',
         heroTitle: 'Achados Imperdíveis & Ofertas Diárias',
         heroSubtitle: 'Os melhores produtos selecionados com desconto para você economizar.',
-        heroBanner: '',
-        affiliateDisclaimer: 'Este site participa de programas de afiliados. Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.'
+        affiliateDisclaimer: 'Este site participa de programas de afiliados. Podemos receber comissões por compras qualificadas.'
     },
     products: [
         {
@@ -71,8 +51,7 @@ let state = {
             category: 'Eletrônicos',
             badge: '45% OFF',
             image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com',
-            clicks: 34
+            link: 'https://mercadolivre.com'
         },
         {
             id: 2,
@@ -82,70 +61,115 @@ let state = {
             category: 'Eletrônicos',
             badge: 'Mais vendido',
             image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com',
-            clicks: 56
-        },
-        {
-            id: 3,
-            title: 'Tênis Esportivo Casual Confortável para Corrida e Academia',
-            price: 159.90,
-            oldPrice: 220.00,
-            category: 'Moda',
-            badge: '30% OFF',
-            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com',
-            clicks: 21
-        },
-        {
-            id: 4,
-            title: 'Air Fryer Fritadeira Sem Óleo 4L Antiaderente',
-            price: 389.00,
-            oldPrice: 499.00,
-            category: 'Casa & Cozinha',
-            badge: 'Frete grátis',
-            image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
-            link: 'https://mercadolivre.com',
-            clicks: 89
+            link: 'https://mercadolivre.com'
         }
     ],
-    favorites: [],
-    quickProductId: null
+    favorites: []
 };
 
-function initApp() {
-    const savedProds = localStorage.getItem('aff_products');
-    const savedSets = localStorage.getItem('aff_settings');
-    const savedCats = localStorage.getItem('aff_categories');
-    const savedFavs = localStorage.getItem('aff_favorites');
-
-    if (savedProds) state.products = JSON.parse(savedProds);
-    if (savedSets) state.settings = JSON.parse(savedSets);
-    if (savedCats) state.categories = JSON.parse(savedCats);
-    if (savedFavs) state.favorites = JSON.parse(savedFavs);
-
-    updateHeaderBranding();
+async function initApp() {
+    if (supabaseClient) {
+        const { data: { session } } = await supabaseClient.auth.getSession();
+        if (session) {
+            state.currentUser = session.user;
+        }
+        supabaseClient.auth.onAuthStateChange((_event, session) => {
+            state.currentUser = session ? session.user : null;
+            updateAuthUI();
+        });
+    }
+    updateAuthUI();
     render();
 }
 
-function saveToStorage() {
-    localStorage.setItem('aff_products', JSON.stringify(state.products));
-    localStorage.setItem('aff_settings', JSON.stringify(state.settings));
-    localStorage.setItem('aff_categories', JSON.stringify(state.categories));
-    localStorage.setItem('aff_favorites', JSON.stringify(state.favorites));
+function updateAuthUI() {
+    const label = document.getElementById('sidebarAuthLabel');
+    const container = document.getElementById('sidebarAuthSection');
+    if (!label || !container) return;
+
+    if (state.currentUser) {
+        label.innerText = 'Minha Conta (' + state.currentUser.email + ')';
+        container.innerHTML = `
+            <a href="#" class="sidebar-item" onclick="toggleSidebar(); handleLogout()">
+                <span class="sidebar-icon">🚪</span>
+                <span class="sidebar-label" style="color: #dc2626;">Sair da Conta</span>
+            </a>
+        `;
+    } else {
+        label.innerText = 'Entrar / Cadastrar';
+    }
 }
 
-function updateHeaderBranding() {
-    document.getElementById('brandTitle').innerText = state.settings.siteName;
-    document.getElementById('brandTagline').innerText = state.settings.tagline;
-    document.getElementById('footerBrandName').innerText = 'ACHOO - ' + state.settings.siteName;
-    document.getElementById('footerDisclaimerText').innerText = state.settings.affiliateDisclaimer;
+function openAuthModal(mode = 'login') {
+    state.isRegisterMode = (mode === 'register');
+    document.getElementById('authModalTitle').innerText = state.isRegisterMode ? 'Criar Nova Conta' : 'Entrar na sua conta';
+    document.getElementById('nameFieldGroup').style.display = state.isRegisterMode ? 'block' : 'none';
+    document.getElementById('authSubmitBtn').innerText = state.isRegisterMode ? 'Cadastrar' : 'Entrar';
+    document.getElementById('authToggleText').innerText = state.isRegisterMode ? 'Já tem uma conta?' : 'Não tem uma conta?';
+    document.getElementById('authToggleBtn').innerText = state.isRegisterMode ? 'Faça login' : 'Cadastre-se';
+    document.getElementById('authErrorMsg').classList.add('hidden');
+    document.getElementById('authModal').classList.remove('hidden');
+}
+
+function toggleAuthMode(e) {
+    e.preventDefault();
+    openAuthModal(state.isRegisterMode ? 'login' : 'register');
+}
+
+async function handleAuthSubmit(e) {
+    e.preventDefault();
+    const email = document.getElementById('authEmail').value;
+    const password = document.getElementById('authPassword').value;
+    const name = document.getElementById('authName').value;
+    const errEl = document.getElementById('authErrorMsg');
+    errEl.classList.add('hidden');
+
+    if (!supabaseClient) {
+        errEl.innerText = 'Supabase não configurado. Adicione suas chaves no início do main.js';
+        errEl.classList.remove('hidden');
+        return;
+    }
+
+    try {
+        if (state.isRegisterMode) {
+            const { data, error } = await supabaseClient.auth.signUp({
+                email,
+                password,
+                options: { data: { full_name: name } }
+            });
+            if (error) throw error;
+            alert('Cadastro realizado com sucesso! Verifique seu e-mail se necessário.');
+        } else {
+            const { data, error } = await supabaseClient.auth.signInWithPassword({
+                email,
+                password
+            });
+            if (error) throw error;
+            state.currentUser = data.user;
+            alert('Login efetuado com sucesso!');
+        }
+        closeModals();
+        updateAuthUI();
+        render();
+    } catch (err) {
+        errEl.innerText = err.message || 'Ocorreu um erro na autenticação.';
+        errEl.classList.remove('hidden');
+    }
+}
+
+async function handleLogout() {
+    if (supabaseClient) {
+        await supabaseClient.auth.signOut();
+    }
+    state.currentUser = null;
+    updateAuthUI();
+    alert('Você saiu da sua conta.');
+    render();
 }
 
 function toggleSidebar() {
-    const sidebar = document.getElementById('leftSidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('active');
+    document.getElementById('leftSidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('active');
 }
 
 function setActiveBottomTab(el) {
@@ -191,18 +215,14 @@ function handleSort(e) {
 function toggleFavorite(id, event) {
     event.stopPropagation();
     const index = state.favorites.indexOf(id);
-    if (index > -1) {
-        state.favorites.splice(index, 1);
-    } else {
-        state.favorites.push(id);
-    }
-    saveToStorage();
+    if (index > -1) state.favorites.splice(index, 1);
+    else state.favorites.push(id);
     render();
 }
 
 function renderCategoriesView() {
     const main = document.getElementById('mainContent');
-    const currentCat = state.categoriesData[state.activeCategoryIndex];
+    const currentCat = state.categoriesData[state.activeCategoryIndex] || state.categoriesData[0];
 
     main.innerHTML = `
         <div class="categories-layout">
@@ -216,9 +236,7 @@ function renderCategoriesView() {
             <div class="categories-content-grid">
                 ${currentCat.subcategories.map(sub => `
                     <div class="subcat-item" onclick="filterBySubcategory('${sub.name}')">
-                        <div class="subcat-img-circle">
-                            <img src="${sub.image}" alt="${sub.name}">
-                        </div>
+                        <div class="subcat-img-circle"><img src="${sub.image}" alt="${sub.name}"></div>
                         <span class="subcat-title">${sub.name}</span>
                     </div>
                 `).join('')}
@@ -228,7 +246,6 @@ function renderCategoriesView() {
 }
 
 function render() {
-    updateHeaderBranding();
     const main = document.getElementById('mainContent');
 
     if (state.currentView === 'categories') {
@@ -237,108 +254,36 @@ function render() {
         main.innerHTML = `
             <section class="hero">
                 <div class="hero-inner">
-                    <div class="hero-content">
-                        <span class="hero-tag">⚡ Ofertas do Dia</span>
-                        <h2>${state.settings.heroTitle}</h2>
-                        <p>${state.settings.heroSubtitle}</p>
-                    </div>
+                    <span class="hero-tag">⚡ Ofertas do Dia</span>
+                    <h2>${state.settings.heroTitle}</h2>
+                    <p>${state.settings.heroSubtitle}</p>
                 </div>
             </section>
-
-            <div id="vitrine" class="container">
+            <div class="container">
                 <div class="search-box-top">
                     <span class="search-icon-top">🔍</span>
                     <input type="text" id="searchInput" placeholder="Buscar produtos, marcas e muito mais..." value="${state.searchQuery}" oninput="handleSearch(event)">
                 </div>
-
                 <div class="categories-bar">
-                    ${state.categories.map(cat => `
-                        <button class="cat-btn ${state.selectedCategory === cat ? 'active' : ''}" onclick="selectCategory('${cat}')">${cat}</button>
-                    `).join('')}
+                    ${state.categories.map(cat => `<button class="cat-btn ${state.selectedCategory === cat ? 'active' : ''}" onclick="selectCategory('${cat}')">${cat}</button>`).join('')}
                 </div>
-
-                <div class="section-header">
-                    <div>
-                        <h3>${state.selectedCategory === 'Todos' ? 'Em destaque' : state.selectedCategory}</h3>
-                        <p id="productCountText">Carregando...</p>
-                    </div>
-                    <div>
-                        <select class="sort-select" onchange="handleSort(event)">
-                            <option value="newest" ${state.sortBy === 'newest' ? 'selected' : ''}>Mais Recentes</option>
-                            <option value="price-asc" ${state.sortBy === 'price-asc' ? 'selected' : ''}>Menor Preço</option>
-                            <option value="price-desc" ${state.sortBy === 'price-desc' ? 'selected' : ''}>Maior Preço</option>
-                            <option value="popular" ${state.sortBy === 'popular' ? 'selected' : ''}>Mais Clicados</option>
-                        </select>
-                    </div>
-                </div>
-
                 <div id="productsGrid" class="products-grid"></div>
             </div>
         `;
         renderStoreProducts();
-    } else if (state.currentView === 'compras') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>🛍️ Minhas Compras</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Histórico e rastreio dos produtos que você visualizou ou adquiriu pelos links de parceiros.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
-                    <p>Nenhuma compra registrada recentemente.</p>
-                    <button class="btn btn-primary" style="margin-top: 15px;" onclick="switchView('store')">Ver Ofertas</button>
-                </div>
-            </div>
-        `;
-    } else if (state.currentView === 'notificacoes') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>🔔 Notificações</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Fique por dentro das últimas promoções e alertas de preços baixos.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 20px;">
-                    <p style="font-size: 13px;">✨ Bem-vindo ao ACHOO! As notificações de ofertas relâmpago aparecerão aqui em breve.</p>
-                </div>
-            </div>
-        `;
     } else if (state.currentView === 'favoritos') {
         const favProducts = state.products.filter(p => state.favorites.includes(p.id));
         main.innerHTML = `
             <div class="admin-container">
-                <div class="section-header" style="margin-bottom: 20px;">
-                    <div>
-                        <h2>❤️ Meus Favoritos</h2>
-                        <p>Produtos salvos para você acompanhar depois.</p>
-                    </div>
-                    <button class="btn btn-light" onclick="switchView('store')">Voltar à Vitrine</button>
-                </div>
-
-                ${favProducts.length === 0 ? `
-                    <div class="table-card" style="padding: 40px; text-align: center;">
-                        <p style="font-size: 15px; color: var(--gray-600); margin-bottom: 15px;">Você ainda não marcou nenhum produto como favorito.</p>
-                        <button class="btn btn-primary" onclick="switchView('store')">Explorar Produtos</button>
-                    </div>
-                ` : `
-                    <div class="products-grid">
+                <h2>❤️ Meus Favoritos</h2>
+                ${favProducts.length === 0 ? '<p style="margin-top:20px;">Nenhum produto favoritado ainda.</p>' : `
+                    <div class="products-grid" style="margin-top:20px;">
                         ${favProducts.map(p => `
                             <div class="product-card">
-                                <div class="product-img-wrap" onclick="openQuickView(${p.id})">
-                                    <img src="${p.image}" alt="${p.title}">
-                                    ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
-                                    <button class="favorite-btn favorited" onclick="toggleFavorite(${p.id}, event)" title="Remover dos favoritos">❤️</button>
-                                </div>
-                                <div class="product-body" onclick="openQuickView(${p.id})">
-                                    <div>
-                                        <div class="product-title">${p.title}</div>
-                                    </div>
-                                    <div>
-                                        <div class="product-price-area">
-                                            ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
-                                            <div class="current-price-row">
-                                                <span class="current-price">${formatCurrency(p.price)}</span>
-                                            </div>
-                                        </div>
-                                        <span class="shipping-badge">Frete grátis</span>
-                                        <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="event.stopPropagation(); trackClick(${p.id})">
-                                            Ver Oferta
-                                        </a>
-                                    </div>
+                                <div class="product-img-wrap"><img src="${p.image}"></div>
+                                <div class="product-body">
+                                    <div class="product-title">${p.title}</div>
+                                    <div class="current-price">${formatCurrency(p.price)}</div>
                                 </div>
                             </div>
                         `).join('')}
@@ -346,217 +291,25 @@ function render() {
                 `}
             </div>
         `;
-    } else if (state.currentView === 'opinioes') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>⭐ Minhas Opiniões</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Avaliações e comentários feitos sobre as lojas parceiras e achados.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
-                    <p>Você ainda não avaliou nenhum produto.</p>
-                </div>
-            </div>
-        `;
-    } else if (state.currentView === 'lojas') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>🏪 Lojas que Sigo</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Acompanhe as lojas oficiais e parceiras de afiliados favoritas.</p>
-                <div class="products-grid" style="margin-top: 20px;">
-                    <div class="product-card" style="padding: 20px; text-align: center;">
-                        <h4>Mercado Livre Oficial</h4>
-                        <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
-                        <span class="ml-badge ml-badge-green" style="display:inline-block;">Seguindo</span>
-                    </div>
-                    <div class="product-card" style="padding: 20px; text-align: center;">
-                        <h4>Amazon Brasil</h4>
-                        <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
-                        <span class="ml-badge ml-badge-green" style="display:inline-block;">Seguindo</span>
-                    </div>
-                </div>
-            </div>
-        `;
+    } else if (state.currentView === 'notificacoes') {
+        main.innerHTML = `<div class="admin-container"><h2>🔔 Notificações</h2><p style="margin-top:10px;">Nenhuma nova notificação de ofertas relâmpago.</p></div>`;
+    } else if (state.currentView === 'compras') {
+        main.innerHTML = `<div class="admin-container"><h2>🛍️ Minhas Compras</h2><p style="margin-top:10px;">Nenhum histórico de pedidos registrado.</p></div>`;
     } else if (state.currentView === 'central-afiliados') {
         main.innerHTML = `
             <div class="admin-container">
                 <h2>🔗 Central de Afiliados e Criadores</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Gerencie seus links de indicação e monetize seus conteúdos.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 25px;">
-                    <h3 style="margin-bottom: 10px; font-size: 16px;">Como funciona?</h3>
-                    <p style="font-size: 13px; line-height: 1.5; color: var(--gray-600);">
-                        Cadastre seus produtos através do Painel Administrativo informando os seus links de afiliado (Amazon, Mercado Livre, Shopee, etc.). Suas comissões são geradas diretamente pelas plataformas oficiais de afiliados sem custo adicional para os compradores.
-                    </p>
-                    <button class="btn btn-primary" style="margin-top: 20px;" onclick="openAdminLogin()">Acessar Painel de Cadastro</button>
-                </div>
-            </div>
-        `;
-    } else if (state.currentView === 'supermercado') {
-        state.selectedCategory = 'Casa & Cozinha';
-        switchView('store');
-    } else if (state.currentView === 'configuracoes') {
-        main.innerHTML = `
-            <div class="admin-container">
-                <h2>⚙️ Configurações do Aplicativo</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Ajustes gerais e gerenciamento de dados salvos.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 25px; max-width: 600px;">
-                    <h4 style="margin-bottom: 10px; font-size: 14px;">Gerenciamento de Dados</h4>
-                    <div class="flex gap-2 flex-wrap" style="margin-top: 12px;">
-                        <button class="btn btn-light" onclick="exportBackup()">📥 Exportar Backup (JSON)</button>
-                        <button class="btn btn-danger" onclick="resetFactoryData()">🔄 Restaurar Padrões</button>
+                <p style="margin-top: 10px; color: var(--gray-600);">Monetize seus links e compartilhe achados com sua audiência.</p>
+                ${!state.currentUser ? `
+                    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px; border: 1px solid var(--gray-200);">
+                        <p>Faça login ou cadastre-se para gerar seus links personalizados de afiliado.</p>
+                        <button class="btn btn-primary" style="margin-top: 12px;" onclick="openAuthModal('login')">Entrar na Conta</button>
                     </div>
-                </div>
-            </div>
-        `;
-    } else {
-        const totalClicks = state.products.reduce((acc, p) => acc + (p.clicks || 0), 0);
-        main.innerHTML = `
-            <div class="admin-container">
-                <div class="section-header" style="margin-bottom: 20px;">
-                    <div>
-                        <h2>Painel Administrativo</h2>
-                        <p>Gerencie seus produtos, links de afiliado e configurações.</p>
+                ` : `
+                    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px;">
+                        <p>Bem-vindo, <strong>${state.currentUser.email}</strong>! Seus links de rastreio estão ativos.</p>
                     </div>
-                    <button class="btn btn-primary" onclick="switchView('store')">🏪 Voltar à Vitrine</button>
-                </div>
-
-                <div class="flex gap-2" style="margin-bottom: 20px;">
-                    <button class="btn ${state.adminTab === 'products' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('products')">📦 Produtos</button>
-                    <button class="btn ${state.adminTab === 'stats' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('stats')">📊 Estatísticas</button>
-                    <button class="btn ${state.adminTab === 'settings' ? 'btn-primary' : 'btn-light'}" onclick="setAdminTab('settings')">⚙️ Configurações</button>
-                </div>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">📦</div>
-                        <div class="stat-info">
-                            <p>Total de Produtos</p>
-                            <h4>${state.products.length}</h4>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">👆</div>
-                        <div class="stat-info">
-                            <p>Cliques nos Links</p>
-                            <h4>${totalClicks}</h4>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🏷️</div>
-                        <div class="stat-info">
-                            <p>Categorias</p>
-                            <h4>${state.categories.length - 1}</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="adminTabProducts" class="${state.adminTab === 'products' ? '' : 'hidden'}">
-                    <div class="table-card">
-                        <div class="table-header">
-                            <h3>Gerenciar Produtos</h3>
-                            <button class="btn btn-primary" onclick="openAddProductModal()">+ Novo Produto</button>
-                        </div>
-                        <div style="overflow-x: auto;">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Produto</th>
-                                        <th>Categoria</th>
-                                        <th>Preço</th>
-                                        <th>Cliques</th>
-                                        <th>Link de Afiliado</th>
-                                        <th style="text-align: right;">Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    ${state.products.map(p => `
-                                        <tr>
-                                            <td>
-                                                <div class="flex gap-2" style="align-items: center;">
-                                                    <img src="${p.image}" style="width: 36px; height: 36px; border-radius: 4px; object-fit: cover;" alt="">
-                                                    <div>
-                                                        <strong style="font-size: 12px; display: block; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</strong>
-                                                        <span style="font-size: 10px; color: #d32f2f;">${p.badge || ''}</span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td><span style="background: var(--gray-100); padding: 3px 6px; border-radius: 4px; font-size: 11px; font-weight: 600;">${p.category}</span></td>
-                                            <td>
-                                                <strong style="color: var(--gray-900);">${formatCurrency(p.price)}</strong>${p.oldPrice ? `<div style="font-size: 10px; color: var(--gray-600); text-decoration: line-through;">${formatCurrency(p.oldPrice)}</div>` : ''}
-                                            </td>
-                                            <td><span style="background: #ecfdf5; color: var(--emerald-600); font-weight: 700; padding: 3px 6px; border-radius: 4px; font-size: 11px;">${p.clicks || 0}</span></td>
-                                            <td><a href="${p.link}" target="_blank" style="font-size: 11px; color: var(--primary); max-width: 150px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.link}</a></td>
-                                            <td style="text-align: right;">
-                                                <button class="btn btn-light" style="padding: 4px 8px;" onclick="openEditProductModal(${p.id})">✏️</button>
-                                                <button class="btn btn-danger" style="padding: 4px 8px;" onclick="deleteProduct(${p.id})">🗑️</button>
-                                            </td>
-                                        </tr>
-                                    `).join('')}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="adminTabStats" class="${state.adminTab === 'stats' ? '' : 'hidden'}">
-                    <div class="table-card" style="padding: 20px;">
-                        <h3 style="margin-bottom: 14px; font-size: 16px;">Produtos Mais Clicados</h3>
-                        <div style="display: flex; flex-direction: column; gap: 10px;">
-                            ${[...state.products].sort((a,b)=>(b.clicks||0)-(a.clicks||0)).map(p => `
-                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: var(--gray-50); border-radius: 6px; border: 1px solid var(--gray-200);">
-                                    <div class="flex gap-2" style="align-items: center;">
-                                        <img src="${p.image}" style="width: 32px; height: 32px; border-radius: 4px; object-fit: cover;" alt="">
-                                        <div>
-                                            <strong style="font-size: 12px;">${p.title}</strong>
-                                            <div style="font-size: 10px; color: var(--gray-600);">${p.category}</div>
-                                        </div>
-                                    </div>
-                                    <div style="text-align: right;">
-                                        <strong style="font-size: 14px; color: var(--primary);">${p.clicks || 0} cliques</strong>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-
-                <div id="adminTabSettings" class="${state.adminTab === 'settings' ? '' : 'hidden'}">
-                    <div class="table-card" style="padding: 20px; max-width: 650px;">
-                        <h3 style="margin-bottom: 16px; font-size: 16px;">Configurações</h3>
-                        <form onsubmit="saveSettings(event)">
-                            <div class="form-group">
-                                <label>Nome do Site</label>
-                                <input type="text" id="settingSiteName" class="form-control" value="${state.settings.siteName}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Slogan do Header</label>
-                                <input type="text" id="settingTagline" class="form-control" value="${state.settings.tagline}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Título do Banner Principal (Hero)</label>
-                                <input type="text" id="settingHeroTitle" class="form-control" value="${state.settings.heroTitle}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Subtítulo do Banner Principal</label>
-                                <textarea id="settingHeroSubtitle" class="form-control" rows="2" required>${state.settings.heroSubtitle}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Texto de Aviso de Afiliado (Rodapé)</label>
-                                <textarea id="settingDisclaimer" class="form-control" rows="3" required>${state.settings.affiliateDisclaimer}</textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar Configurações</button>
-                        </form>
-
-                        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">
-                            <h4 style="font-size: 14px; margin-bottom: 10px;">Backup e Dados</h4>
-                            <div class="flex gap-2 flex-wrap">
-                                <button class="btn btn-light" onclick="exportBackup()">📥 Exportar JSON</button>
-                                <label class="btn btn-light" style="cursor: pointer;">
-                                    📤 Importar JSON <input type="file" accept=".json" class="hidden" onchange="importBackup(event)">
-                                </label>
-                                <button class="btn btn-danger" onclick="resetFactoryData()">🔄 Restaurar Padrões</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                `}
             </div>
         `;
     }
@@ -564,263 +317,40 @@ function render() {
 
 function renderStoreProducts() {
     let list = [...state.products];
-
-    if (state.selectedCategory !== 'Todos') {
-        list = list.filter(p => p.category === state.selectedCategory);
-    }
-
+    if (state.selectedCategory !== 'Todos') list = list.filter(p => p.category === state.selectedCategory);
     if (state.searchQuery.trim() !== '') {
         const q = state.searchQuery.toLowerCase();
-        list = list.filter(p => p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+        list = list.filter(p => p.title.toLowerCase().includes(q));
     }
-
-    if (state.sortBy === 'newest') {
-        list.sort((a, b) => b.id - a.id);
-    } else if (state.sortBy === 'price-asc') {
-        list.sort((a, b) => a.price - b.price);
-    } else if (state.sortBy === 'price-desc') {
-        list.sort((a, b) => b.price - a.price);
-    } else if (state.sortBy === 'popular') {
-        list.sort((a, b) => (b.clicks || 0) - (a.clicks || 0));
-    }
-
-    const countEl = document.getElementById('productCountText');
-    if (countEl) countEl.innerText = `${list.length} produtos encontrados`;
-
     const grid = document.getElementById('productsGrid');
     if (!grid) return;
-
-    if (list.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column: 1 / -1; text-align: center; padding: 40px 16px; background: white; border-radius: 8px; border: 1px solid var(--gray-200);">
-                <div style="font-size: 36px; margin-bottom: 8px;">🔍</div>
-                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 6px;">Nenhum produto encontrado</h4>
-                <p style="font-size: 12px; color: var(--gray-600); margin-bottom: 16px;">Tente buscar por outro termo.</p>
-                <button class="btn btn-primary" onclick="state.searchQuery=''; state.selectedCategory='Todos'; render();">Limpar Filtros</button>
+    grid.innerHTML = list.map(p => `
+        <div class="product-card" onclick="openQuickView(${p.id})">
+            <div class="product-img-wrap"><img src="${p.image}" alt="${p.title}">${p.badge ? `<span class="badge">${p.badge}</span>` : ''}</div>
+            <div class="product-body">
+                <div class="product-title">${p.title}</div>
+                <div class="current-price">${formatCurrency(p.price)}</div>
+                <a href="${p.link}" target="_blank" class="btn btn-primary" style="width:1text-align:center;margin-top:10px;font-size:12px;" onclick="event.stopPropagation()">Ver Oferta</a>
             </div>
-        `;
-        return;
-    }
-
-    grid.innerHTML = list.map(p => {
-        const isFav = state.favorites.includes(p.id);
-        return `
-            <div class="product-card">
-                <div class="product-img-wrap" onclick="openQuickView(${p.id})">
-                    <img src="${p.image}" alt="${p.title}">
-                    ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
-                    <button class="favorite-btn ${isFav ? 'favorited' : ''}" onclick="toggleFavorite(${p.id}, event)" title="Favoritar">
-                        ${isFav ? '❤️' : '🤍'}
-                    </button>
-                </div>
-                <div class="product-body" onclick="openQuickView(${p.id})">
-                    <div>
-                        <div class="product-title">${p.title}</div>
-                    </div>
-                    <div>
-                        <div class="product-price-area">
-                            ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
-                            <div class="current-price-row">
-                                <span class="current-price">${formatCurrency(p.price)}</span>
-                            </div>
-                        </div>
-                        <span class="shipping-badge">Frete grátis</span>
-                        <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="event.stopPropagation(); trackClick(${p.id})">
-                            Ver Oferta
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `;
-    }).join('');
-}
-
-function openAdminLogin() {
-    document.getElementById('loginPasswordInput').value = '';
-    document.getElementById('loginErrorMsg').classList.add('hidden');
-    document.getElementById('loginModal').classList.remove('hidden');
-}
-
-function handleLogin(e) {
-    e.preventDefault();
-    const pass = document.getElementById('loginPasswordInput').value;
-    if (pass === 'admin123') {
-        closeModals();
-        switchView('admin');
-    } else {
-        document.getElementById('loginErrorMsg').classList.remove('hidden');
-    }
-}
-
-function setAdminTab(tab) {
-    state.adminTab = tab;
-    render();
-}
-
-function closeModals() {
-    document.getElementById('loginModal').classList.add('hidden');
-    document.getElementById('productModal').classList.add('hidden');
-    document.getElementById('quickModal').classList.add('hidden');
-}
-
-function populateCategoryDropdown(selected = '') {
-    const select = document.getElementById('prodCategory');
-    select.innerHTML = state.categories.filter(c => c !== 'Todos').map(c => `
-        <option value="${c}" ${c === selected ? 'selected' : ''}>${c}</option>
+        </div>
     `).join('');
-}
-
-function openAddProductModal() {
-    document.getElementById('productModalTitle').innerText = 'Adicionar Novo Produto';
-    document.getElementById('prodId').value = '';
-    document.getElementById('prodTitle').value = '';
-    document.getElementById('prodPrice').value = '';
-    document.getElementById('prodOldPrice').value = '';
-    document.getElementById('prodBadge').value = '';
-    document.getElementById('prodImage').value = '';
-    document.getElementById('prodLink').value = '';
-    populateCategoryDropdown();
-    document.getElementById('productModal').classList.remove('hidden');
-}
-
-function openEditProductModal(id) {
-    const p = state.products.find(item => item.id === id);
-    if (!p) return;
-    document.getElementById('productModalTitle').innerText = 'Editar Produto';
-    document.getElementById('prodId').value = p.id;
-    document.getElementById('prodTitle').value = p.title;
-    document.getElementById('prodPrice').value = p.price;
-    document.getElementById('prodOldPrice').value = p.oldPrice || '';
-    document.getElementById('prodBadge').value = p.badge || '';
-    document.getElementById('prodImage').value = p.image;
-    document.getElementById('prodLink').value = p.link;
-    populateCategoryDropdown(p.category);
-    document.getElementById('productModal').classList.remove('hidden');
-}
-
-function saveProduct(e) {
-    e.preventDefault();
-    const id = document.getElementById('prodId').value;
-    const title = document.getElementById('prodTitle').value;
-    const price = Number(document.getElementById('prodPrice').value);
-    const oldPrice = document.getElementById('prodOldPrice').value ? Number(document.getElementById('prodOldPrice').value) : null;
-    const category = document.getElementById('prodCategory').value;
-    const badge = document.getElementById('prodBadge').value;
-    const image = document.getElementById('prodImage').value;
-    const link = document.getElementById('prodLink').value;
-
-    if (id) {
-        const index = state.products.findIndex(p => p.id == id);
-        if (index !== -1) {
-            state.products[index] = { ...state.products[index], title, price, oldPrice, category, badge, image, link };
-        }
-    } else {
-        const newId = state.products.length > 0 ? Math.max(...state.products.map(p => p.id)) + 1 : 1;
-        state.products.unshift({
-            id: newId,
-            title,
-            price,
-            oldPrice,
-            category,
-            badge,
-            image,
-            link,
-            clicks: 0
-        });
-    }
-
-    saveToStorage();
-    closeModals();
-    render();
-}
-
-function deleteProduct(id) {
-    if (confirm('Tem certeza que deseja excluir este produto?')) {
-        state.products = state.products.filter(p => p.id !== id);
-        saveToStorage();
-        render();
-    }
 }
 
 function openQuickView(id) {
     const p = state.products.find(item => item.id === id);
     if (!p) return;
-    state.quickProductId = p.id;
     document.getElementById('quickImg').src = p.image;
     document.getElementById('quickTitle').innerText = p.title;
     document.getElementById('quickCategory').innerText = p.category;
     document.getElementById('quickPrice').innerText = formatCurrency(p.price);
     document.getElementById('quickOldPrice').innerText = p.oldPrice ? formatCurrency(p.oldPrice) : '';
-    document.getElementById('quickBadge').innerText = p.badge || '';
-    document.getElementById('quickBadge').style.display = p.badge ? 'block' : 'none';
     document.getElementById('quickBuyBtn').href = p.link;
     document.getElementById('quickModal').classList.remove('hidden');
 }
 
-function trackClick(id) {
-    const p = state.products.find(item => item.id === id);
-    if (p) {
-        p.clicks = (p.clicks || 0) + 1;
-        saveToStorage();
-    }
-}
-
-function trackClickFromQuick() {
-    if (state.quickProductId) {
-        trackClick(state.quickProductId);
-    }
-    closeModals();
-}
-
-function saveSettings(e) {
-    e.preventDefault();
-    state.settings.siteName = document.getElementById('settingSiteName').value;
-    state.settings.tagline = document.getElementById('settingTagline').value;
-    state.settings.heroTitle = document.getElementById('settingHeroTitle').value;
-    state.settings.heroSubtitle = document.getElementById('settingHeroSubtitle').value;
-    state.settings.affiliateDisclaimer = document.getElementById('settingDisclaimer').value;
-    saveToStorage();
-    updateHeaderBranding();
-    alert('Configurações salvas com sucesso!');
-    render();
-}
-
-function exportBackup() {
-    const data = { products: state.products, settings: state.settings, categories: state.categories, favorites: state.favorites };
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'backup-vitrine.json';
-    a.click();
-}
-
-function importBackup(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(evt) {
-        try {
-            const data = JSON.parse(evt.target.result);
-            if (data.products) state.products = data.products;
-            if (data.settings) state.settings = data.settings;
-            if (data.categories) state.categories = data.categories;
-            if (data.favorites) state.favorites = data.favorites;
-            saveToStorage();
-            alert('Backup importado com sucesso!');
-            render();
-        } catch(err) {
-            alert('Erro ao ler arquivo JSON.');
-        }
-    };
-    reader.readAsText(file);
-}
-
-function resetFactoryData() {
-    if (confirm('Deseja restaurar os padrões? Todos os dados atuais serão substituídos.')) {
-        localStorage.clear();
-        location.reload();
-    }
+function closeModals() {
+    document.getElementById('authModal').classList.add('hidden');
+    document.getElementById('quickModal').classList.add('hidden');
 }
 
 window.onload = initApp;

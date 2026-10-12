@@ -6,6 +6,8 @@
     <title>ACHOO - Vitrine de Ofertas & Afiliados</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Supabase Client CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +35,7 @@
         </div>
     </header>
 
-    <!-- Menu Lateral Estilo Mercado Livre -->
+    <!-- Menu Lateral -->
     <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
     <aside id="leftSidebar" class="sidebar">
         <div class="sidebar-body">
@@ -44,12 +46,15 @@
                 <span class="sidebar-label">Início</span>
             </a>
 
-            <a href="#" class="sidebar-item" onclick="toggleSidebar(); openAdminLogin()">
-                <span class="sidebar-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                </span>
-                <span class="sidebar-label">Painel Administrativo</span>
-            </a>
+            <!-- Botão Dinâmico de Login/Perfil -->
+            <div id="sidebarAuthSection">
+                <a href="#" class="sidebar-item" onclick="toggleSidebar(); openAuthModal('login')">
+                    <span class="sidebar-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                    </span>
+                    <span class="sidebar-label" id="sidebarAuthLabel">Entrar / Cadastrar</span>
+                </a>
+            </div>
 
             <div class="sidebar-divider"></div>
             <div class="sidebar-section-title">Minha actividade</div>
@@ -75,21 +80,6 @@
                 <span class="sidebar-label">Favoritos</span>
             </a>
 
-            <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('opinioes')">
-                <span class="sidebar-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                </span>
-                <span class="sidebar-label">Minhas opiniões</span>
-            </a>
-
-            <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('lojas')">
-                <span class="sidebar-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg>
-                </span>
-                <span class="sidebar-label">Lojas que sigo</span>
-                <span class="ml-badge ml-badge-blue">NOVO</span>
-            </a>
-
             <div class="sidebar-divider"></div>
             <div class="sidebar-section-title">Descubra</div>
 
@@ -107,29 +97,15 @@
                 <span class="sidebar-label">Central de afiliados e criadores</span>
                 <span class="ml-badge ml-badge-green">GANHA $</span>
             </a>
-
-            <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('supermercado')">
-                <span class="sidebar-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                </span>
-                <span class="sidebar-label">Supermercado</span>
-            </a>
-
-            <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('configuracoes')">
-                <span class="sidebar-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                </span>
-                <span class="sidebar-label">Configurações</span>
-            </a>
         </div>
     </aside>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main id="mainContent" style="flex: 1; padding-bottom: 70px;">
-        <!-- Injected via JavaScript -->
+        <!-- Injetado via JS -->
     </main>
 
-    <!-- Barra de Navegação Inferior Atualizada -->
+    <!-- Bottom Nav -->
     <nav class="bottom-nav">
         <a href="#" class="bottom-nav-item active" onclick="switchView('store'); setActiveBottomTab(this);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -154,110 +130,68 @@
     </nav>
 
     <!-- Footer -->
-    <footer id="footerSection">
+    <footer>
         <div class="container footer-inner">
-            <div class="flex gap-2" style="align-items: center;">
-                <span style="font-weight:700;font-size:15px;" id="footerBrandName">ACHOO - Mega Ofertas</span>
-            </div>
+            <span style="font-weight:700;font-size:15px;" id="footerBrandName">ACHOO - Mega Ofertas</span>
             <div class="footer-disclaimer" id="footerDisclaimerText">
-                Este site participa de programas de afiliados. Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.
+                Este site participa de programas de afiliados. Podemos receber comissões por compras qualificadas realizadas através dos nossos links.
             </div>
         </div>
     </footer>
 
-    <!-- MODALS -->
-    <div id="loginModal" class="modal-overlay hidden">
-        <div class="modal-card" style="max-width: 360px; text-align: center;">
+    <!-- MODAL DE AUTENTICAÇÃO (LOGIN / CADASTRO) -->
+    <div id="authModal" class="modal-overlay hidden">
+        <div class="modal-card" style="max-width: 380px;">
             <div class="modal-header">
-                <h3>Painel Administrativo</h3>
+                <h3 id="authModalTitle">Entrar na sua conta</h3>
                 <button class="btn btn-light" style="padding: 4px 8px;" onclick="closeModals()">✕</button>
             </div>
             <div class="modal-body">
-                <div style="font-size: 32px; margin-bottom: 10px;">🔐</div>
-                <p style="font-size: 12px; color: var(--gray-600); margin-bottom: 16px;">Digite a senha de acesso para gerenciar seus links.</p>
-                <form onsubmit="handleLogin(event)">
-                    <div class="form-group">
-                        <input type="password" id="loginPasswordInput" class="form-control text-center" placeholder="Senha (padrão: admin123)" required>
-                    </div>
-                    <p id="loginErrorMsg" class="hidden" style="color: #d32f2f; font-size: 11px; margin-bottom: 10px;">Senha incorreta. Tente novamente.</p>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="productModal" class="modal-overlay hidden">
-        <div class="modal-card">
-            <div class="modal-header">
-                <h3 id="productModalTitle">Adicionar Novo Produto</h3>
-                <button class="btn btn-light" style="padding: 4px 8px;" onclick="closeModals()">✕</button>
-            </div>
-            <div class="modal-body">
-                <form onsubmit="saveProduct(event)">
-                    <input type="hidden" id="prodId">
-                    <div class="form-group">
-                        <label>Título do Produto</label>
-                        <input type="text" id="prodTitle" class="form-control" placeholder="Ex: Smartwatch Watch 8 Ultra" required>
-                    </div>
-                    <div class="flex gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
-                        <div class="form-group">
-                            <label>Preço Atual (R$)</label>
-                            <input type="number" step="0.01" id="prodPrice" class="form-control" placeholder="199.90" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Preço Antigo (Opcional)</label>
-                            <input type="number" step="0.01" id="prodOldPrice" class="form-control" placeholder="299.90">
-                        </div>
-                    </div>
-                    <div class="flex gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
-                        <div class="form-group">
-                            <label>Categoria</label>
-                            <select id="prodCategory" class="form-control"></select>
-                        </div>
-                        <div class="form-group">
-                            <label>Desconto / Selo (Ex: 35% OFF)</label>
-                            <input type="text" id="prodBadge" class="form-control" placeholder="35% OFF">
-                        </div>
+                <form id="authForm" onsubmit="handleAuthSubmit(event)">
+                    <div class="form-group" id="nameFieldGroup" style="display: none;">
+                        <label>Nome Completo</label>
+                        <input type="text" id="authName" class="form-control" placeholder="Seu Nome">
                     </div>
                     <div class="form-group">
-                        <label>URL da Imagem</label>
-                        <input type="url" id="prodImage" class="form-control" placeholder="https://exemplo.com/foto.jpg" required>
+                        <label>E-mail</label>
+                        <input type="email5" id="authEmail" class="form-control" placeholder="seu@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Link de Afiliado (URL de Indicação)</label>
-                        <input type="url" id="prodLink" class="form-control" placeholder="https://mercadolivre.com/... ou link de afiliado" required>
+                        <label>Senha</label>
+                        <input type="password" id="authPassword" class="form-control" placeholder="Mínimo 6 caracteres" required>
                     </div>
-                    <div class="flex gap-2 justify-end mt-4">
-                        <button type="button" class="btn btn-light" onclick="closeModals()">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Salvar Produto</button>
+                    <p id="authErrorMsg" class="hidden" style="color: #d32f2f; font-size: 11px; margin-bottom: 10px;"></p>
+                    
+                    <button type="submit" id="authSubmitBtn" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Entrar</button>
+                    
+                    <div style="text-align: center; font-size: 12px;">
+                        <span id="authToggleText">Não tem uma conta?</span> 
+                        <a href="#" id="authToggleBtn" onclick="toggleAuthMode(event)" style="color: var(--primary); font-weight: 600;">Cadastre-se</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- MODAL QUICK VIEW -->
     <div id="quickModal" class="modal-overlay hidden">
         <div class="modal-card" style="max-width: 580px; display: flex; flex-direction: row; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 220px; background: white; position: relative; display: flex; align-items: center; justify-content: center; padding: 20px;">
+            <div style="flex: 1; min-width: 220px; background: white; display: flex; align-items: center; justify-content: center; padding: 20px;">
                 <img id="quickImg" src="" style="max-width: 100%; max-height: 250px; object-fit: contain;" alt="">
-                <span id="quickBadge" class="badge"></span>
             </div>
-            <div style="flex: 1; min-width: 220px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background: #fff;">
+            <div style="flex: 1; min-width: 220px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                         <span id="quickCategory" style="font-size: 10px; font-weight: 700; background: var(--primary-light); color: var(--primary); padding: 3px 8px; border-radius: 4px;"></span>
                         <button class="btn btn-light" style="padding: 2px 6px;" onclick="closeModals()">✕</button>
                     </div>
-                    <h3 id="quickTitle" style="font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 10px; line-height: 1.3;"></h3>
+                    <h3 id="quickTitle" style="font-size: 15px; font-weight: 600; margin-bottom: 10px;"></h3>
                     <div style="margin-bottom: 16px;">
                         <span id="quickOldPrice" class="old-price"></span>
-                        <div class="current-price-row">
-                            <span id="quickPrice" class="current-price"></span>
-                        </div>
-                        <span style="font-size: 11px; color: var(--emerald-600); font-weight: 600; margin-top: 4px; display: block;">Envio full e frete grátis</span>
+                        <div class="current-price-row"><span id="quickPrice" class="current-price"></span></div>
                     </div>
                 </div>
-                <a id="quickBuyBtn" href="#" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="trackClickFromQuick()">Ver Oferta na Loja ➔</a>
+                <a id="quickBuyBtn" href="#" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;" onclick="closeModals()">Ver Oferta na Loja ➔</a>
             </div>
         </div>
     </div>
