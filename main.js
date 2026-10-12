@@ -59,6 +59,7 @@ let state = {
             clicks: 89
         }
     ],
+    favorites: [],
     quickProductId: null
 };
 
@@ -66,10 +67,12 @@ function initApp() {
     const savedProds = localStorage.getItem('aff_products');
     const savedSets = localStorage.getItem('aff_settings');
     const savedCats = localStorage.getItem('aff_categories');
+    const savedFavs = localStorage.getItem('aff_favorites');
 
     if (savedProds) state.products = JSON.parse(savedProds);
     if (savedSets) state.settings = JSON.parse(savedSets);
     if (savedCats) state.categories = JSON.parse(savedCats);
+    if (savedFavs) state.favorites = JSON.parse(savedFavs);
 
     updateHeaderBranding();
     render();
@@ -79,6 +82,7 @@ function saveToStorage() {
     localStorage.setItem('aff_products', JSON.stringify(state.products));
     localStorage.setItem('aff_settings', JSON.stringify(state.settings));
     localStorage.setItem('aff_categories', JSON.stringify(state.categories));
+    localStorage.setItem('aff_favorites', JSON.stringify(state.favorites));
 }
 
 function updateHeaderBranding() {
@@ -117,6 +121,18 @@ function selectCategory(cat) {
 function handleSort(e) {
     state.sortBy = e.target.value;
     renderStoreProducts();
+}
+
+function toggleFavorite(id, event) {
+    event.stopPropagation();
+    const index = state.favorites.indexOf(id);
+    if (index > -1) {
+        state.favorites.splice(index, 1);
+    } else {
+        state.favorites.push(id);
+    }
+    saveToStorage();
+    render();
 }
 
 function render() {
@@ -188,14 +204,52 @@ function render() {
             </div>
         `;
     } else if (state.currentView === 'favoritos') {
+        const favProducts = state.products.filter(p => state.favorites.includes(p.id));
         main.innerHTML = `
             <div class="admin-container">
-                <h2>❤️ Seus Favoritos</h2>
-                <p style="margin-top: 10px; color: var(--gray-600);">Produtos salvos para você acompanhar depois.</p>
-                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
-                    <p>Sua lista de favoritos está vazia.</p>
-                    <button class="btn btn-primary" style="margin-top: 15px;" onclick="switchView('store')">Explorar Vitrine</button>
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <div>
+                        <h2>❤️ Meus Favoritos</h2>
+                        <p>Produtos salvos para você acompanhar depois.</p>
+                    </div>
+                    <button class="btn btn-light" onclick="switchView('store')">Voltar à Vitrine</button>
                 </div>
+
+                ${favProducts.length === 0 ? `
+                    <div class="table-card" style="padding: 40px; text-align: center;">
+                        <p style="font-size: 15px; color: var(--gray-600); margin-bottom: 15px;">Você ainda não marcou nenhum produto como favorito.</p>
+                        <button class="btn btn-primary" onclick="switchView('store')">Explorar Produtos</button>
+                    </div>
+                ` : `
+                    <div class="products-grid">
+                        ${favProducts.map(p => `
+                            <div class="product-card">
+                                <div class="product-img-wrap" onclick="openQuickView(${p.id})">
+                                    <img src="${p.image}" alt="${p.title}">
+                                    ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+                                    <button class="favorite-btn favorited" onclick="toggleFavorite(${p.id}, event)" title="Remover dos favoritos">❤️</button>
+                                </div>
+                                <div class="product-body" onclick="openQuickView(${p.id})">
+                                    <div>
+                                        <div class="product-title">${p.title}</div>
+                                    </div>
+                                    <div>
+                                        <div class="product-price-area">
+                                            ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
+                                            <div class="current-price-row">
+                                                <span class="current-price">${formatCurrency(p.price)}</span>
+                                            </div>
+                                        </div>
+                                        <span class="shipping-badge">Frete grátis</span>
+                                        <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="event.stopPropagation(); trackClick(${p.id})">
+                                            Ver Oferta
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `}
             </div>
         `;
     } else if (state.currentView === 'opinioes') {
@@ -454,31 +508,37 @@ function renderStoreProducts() {
         return;
     }
 
-    grid.innerHTML = list.map(p => `
-        <div class="product-card">
-            <div class="product-img-wrap" onclick="openQuickView(${p.id})">
-                <img src="${p.image}" alt="${p.title}">
-                ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
-            </div>
-            <div class="product-body" onclick="openQuickView(${p.id})">
-                <div>
-                    <div class="product-title">${p.title}</div>
+    grid.innerHTML = list.map(p => {
+        const isFav = state.favorites.includes(p.id);
+        return `
+            <div class="product-card">
+                <div class="product-img-wrap" onclick="openQuickView(${p.id})">
+                    <img src="${p.image}" alt="${p.title}">
+                    ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+                    <button class="favorite-btn ${isFav ? 'favorited' : ''}" onclick="toggleFavorite(${p.id}, event)" title="Favoritar">
+                        ${isFav ? '❤️' : '🤍'}
+                    </button>
                 </div>
-                <div>
-                    <div class="product-price-area">
-                        ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
-                        <div class="current-price-row">
-                            <span class="current-price">${formatCurrency(p.price)}</span>
-                        </div>
+                <div class="product-body" onclick="openQuickView(${p.id})">
+                    <div>
+                        <div class="product-title">${p.title}</div>
                     </div>
-                    <span class="shipping-badge">Frete grátis</span>
-                    <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="event.stopPropagation(); trackClick(${p.id})">
-                        Ver Oferta
-                    </a>
+                    <div>
+                        <div class="product-price-area">
+                            ${p.oldPrice ? `<span class="old-price">${formatCurrency(p.oldPrice)}</span>` : ''}
+                            <div class="current-price-row">
+                                <span class="current-price">${formatCurrency(p.price)}</span>
+                            </div>
+                        </div>
+                        <span class="shipping-badge">Frete grátis</span>
+                        <a href="${p.link}" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 8px 10px; font-size: 12px;" onclick="event.stopPropagation(); trackClick(${p.id})">
+                            Ver Oferta
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 function openAdminLogin() {
@@ -632,7 +692,7 @@ function saveSettings(e) {
 }
 
 function exportBackup() {
-    const data = { products: state.products, settings: state.settings, categories: state.categories };
+    const data = { products: state.products, settings: state.settings, categories: state.categories, favorites: state.favorites };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -651,6 +711,7 @@ function importBackup(e) {
             if (data.products) state.products = data.products;
             if (data.settings) state.settings = data.settings;
             if (data.categories) state.categories = data.categories;
+            if (data.favorites) state.favorites = data.favorites;
             saveToStorage();
             alert('Backup importado com sucesso!');
             render();

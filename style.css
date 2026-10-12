@@ -9,7 +9,7 @@
     --gray-600: #666666;
     --gray-800: #333333;
     --gray-900: #111111;
-    --red-500: #ff7777;
+    --red-500: #ff5252;
     --emerald-600: #00a650;
     --amber-400: #fff159;
 }
@@ -52,7 +52,6 @@ header {
     position: relative;
 }
 
-/* Menu Toggle Button (Esquerda) */
 .menu-toggle-btn {
     background: transparent;
     border: none;
@@ -63,7 +62,6 @@ header {
     z-index: 10;
 }
 
-/* Título Centralizado */
 .center-brand {
     position: absolute;
     left: 50%;
@@ -90,7 +88,6 @@ header {
     color: var(--gray-600);
 }
 
-/* Logo (Direita) */
 .logo-area-right {
     cursor: pointer;
     z-index: 10;
@@ -112,7 +109,7 @@ header {
     object-fit: cover;
 }
 
-/* Sidebar (Menu Lateral Estilo Mercado Livre) */
+/* Sidebar */
 .sidebar-overlay {
     position: fixed;
     inset: 0;
@@ -199,14 +196,10 @@ header {
     border-radius: 4px;
     color: white;
 }
-.badge-tag.blue {
-    background: var(--primary);
-}
-.badge-tag.green {
-    background: var(--emerald-600);
-}
+.badge-tag.blue { background: var(--primary); }
+.badge-tag.green { background: var(--emerald-600); }
 
-/* Search Bar (Comprida e Arredondada acima das categorias) */
+/* Search Bar */
 .search-box-top {
     width: 100%;
     margin-bottom: 20px;
@@ -256,24 +249,18 @@ header {
     color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.btn-primary:hover {
-    background: var(--primary-dark);
-}
+.btn-primary:hover { background: var(--primary-dark); }
 .btn-light {
     background: white;
     color: var(--gray-800);
     border: 1px solid var(--gray-200);
 }
-.btn-light:hover {
-    background: var(--gray-100);
-}
+.btn-light:hover { background: var(--gray-100); }
 .btn-danger {
     background: #fee2e2;
     color: #dc2626;
 }
-.btn-danger:hover {
-    background: #fecaca;
-}
+.btn-danger:hover { background: #fecaca; }
 
 /* Hero Banner */
 .hero {
@@ -318,9 +305,7 @@ header {
     margin-bottom: 20px;
     scrollbar-width: none;
 }
-.categories-bar::-webkit-scrollbar {
-    display: none;
-}
+.categories-bar::-webkit-scrollbar { display: none; }
 .cat-btn {
     padding: 6px 14px;
     background: white;
@@ -339,9 +324,7 @@ header {
     color: white;
     border-color: var(--primary);
 }
-.cat-btn:hover:not(.active) {
-    background: var(--gray-100);
-}
+.cat-btn:hover:not(.active) { background: var(--gray-100); }
 
 /* Section Header */
 .section-header {
@@ -425,6 +408,33 @@ select.sort-select {
 .product-card:hover .product-img-wrap img {
     transform: scale(1.04);
 }
+
+/* Botão de Favorito (Coração) */
+.favorite-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 5;
+    transition: transform 0.2s;
+}
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+.favorite-btn.favorited {
+    color: var(--red-500);
+}
+
 .badge {
     position: absolute;
     top: 8px;
@@ -458,12 +468,8 @@ select.sort-select {
     overflow: hidden;
     cursor: pointer;
 }
-.product-title:hover {
-    color: var(--primary);
-}
-.product-price-area {
-    margin-bottom: 10px;
-}
+.product-title:hover { color: var(--primary); }
+.product-price-area { margin-bottom: 10px; }
 .old-price {
     font-size: 11px;
     color: #999999;
@@ -556,7 +562,6 @@ footer {
     color: var(--gray-900);
 }
 
-/* Tables */
 .table-card {
     background: white;
     border-radius: 8px;
@@ -592,9 +597,7 @@ td {
     font-size: 13px;
     vertical-align: middle;
 }
-tr:hover td {
-    background: var(--gray-50);
-}
+tr:hover td { background: var(--gray-50); }
 
 /* Modals */
 .modal-overlay {
@@ -633,9 +636,7 @@ tr:hover td {
     max-height: 75vh;
     overflow-y: auto;
 }
-.form-group {
-    margin-bottom: 14px;
-}
+.form-group { margin-bottom: 14px; }
 .form-group label {
     display: block;
     font-size: 11px;
