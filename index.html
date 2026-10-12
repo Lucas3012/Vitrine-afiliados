@@ -37,20 +37,55 @@
         </div>
     </header>
 
-    <!-- Menu Lateral Esquerdo (Sidebar) -->
+    <!-- Menu Lateral Estilo Mercado Livre -->
     <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
     <aside id="leftSidebar" class="sidebar">
         <div class="sidebar-header">
-            <h3>Menu ACHOO</h3>
+            <h3>Menu</h3>
             <button class="btn btn-light" style="padding: 2px 6px;" onclick="toggleSidebar()">✕</button>
         </div>
         <div class="sidebar-body">
-            <button class="btn btn-primary sidebar-btn" onclick="toggleSidebar(); switchView('store')">
-                🏪 Ver Vitrine
-            </button>
-            <button class="btn btn-light sidebar-btn" onclick="toggleSidebar(); openAdminLogin()">
-                🔒 Painel Admin
-            </button>
+            <a href="#" class="sidebar-item" onclick="toggleSidebar(); switchView('store')">
+                <span class="sidebar-icon">🏠</span> <span>Início</span>
+            </a>
+            <a href="#" class="sidebar-item" onclick="toggleSidebar(); openAdminLogin()">
+                <span class="sidebar-icon">🔒</span> <span>Painel Administrativo</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-section-title">Minha atividade</div>
+            
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">🛍️</span> <span>Minhas compras</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">🔔</span> <span>Notificações</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">❤️</span> <span>Favoritos</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⭐</span> <span>Minhas opiniões</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">🏪</span> <span>Lojas que sigo</span> <span class="badge-tag blue">NOVO</span>
+            </a>
+
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-section-title">Descubra</div>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">🏷️</span> <span>Ofertas do dia</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">🔗</span> <span>Central de afiliados</span> <span class="badge-tag green">GANHA $</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">📦</span> <span>Supermercado</span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⚙️</span> <span>Configurações</span>
+            </a>
         </div>
     </aside>
 
