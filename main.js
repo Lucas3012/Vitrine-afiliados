@@ -19,7 +19,6 @@ let state = {
     sortBy: 'newest',
     currentUser: null,
     isRegisterMode: false,
-    adminTab: 'products',
     categoriesData: [
         {
             name: 'Moda e Acessórios',
@@ -108,14 +107,19 @@ async function initApp() {
     if (savedProds) state.products = JSON.parse(savedProds);
 
     if (supabaseClient) {
-        const { data: { session } } = await supabaseClient.auth.getSession();
-        if (session) {
-            state.currentUser = session.user;
+        try {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (session) {
+                state.currentUser = session.user;
+            }
+            supabaseClient.auth.onAuthStateChange((_event, session) => {
+                state.currentUser = session ? session.user : null;
+                updateAuthUI();
+                render();
+            });
+        } catch(err) {
+            console.log('Sessão não recuperada:', err);
         }
-        supabaseClient.auth.onAuthStateChange((_event, session) => {
-            state.currentUser = session ? session.user : null;
-            updateAuthUI();
-        });
     }
     updateAuthUI();
     render();
@@ -140,6 +144,14 @@ function updateAuthUI() {
         `;
     } else {
         label.innerText = 'Entrar / Cadastrar';
+        container.innerHTML = `
+            <a href="#" class="sidebar-item" onclick="toggleSidebar(); openAuthModal('login')">
+                <span class="sidebar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                </span>
+                <span class="sidebar-label" id="sidebarAuthLabel">Entrar / Cadastrar</span>
+            </a>
+        `;
     }
 }
 
