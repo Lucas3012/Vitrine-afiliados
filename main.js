@@ -92,7 +92,7 @@ function toggleSidebar() {
     const sidebar = document.getElementById('leftSidebar');
     const overlay = document.getElementById('sidebarOverlay');
     sidebar.classList.toggle('open');
-    overlay.classList.toggle('hidden');
+    overlay.classList.toggle('active');
 }
 
 function switchView(view) {
@@ -136,7 +136,6 @@ function render() {
             </section>
 
             <div id="vitrine" class="container">
-                <!-- Barra de pesquisa comprida e arredondada acima das categorias -->
                 <div class="search-box-top">
                     <span class="search-icon-top">🔍</span>
                     <input type="text" id="searchInput" placeholder="Buscar produtos, marcas e muito mais..." value="${state.searchQuery}" oninput="handleSearch(event)">
