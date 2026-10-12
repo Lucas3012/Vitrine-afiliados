@@ -166,6 +166,98 @@ function render() {
             </div>
         `;
         renderStoreProducts();
+    } else if (state.currentView === 'compras') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>🛍️ Minhas Compras</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Histórico e rastreio dos produtos que você visualizou ou adquiriu pelos links de parceiros.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
+                    <p>Nenhuma compra registrada recentemente.</p>
+                    <button class="btn btn-primary" style="margin-top: 15px;" onclick="switchView('store')">Ver Ofertas</button>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'notificacoes') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>🔔 Notificações</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Fique por dentro das últimas promoções e alertas de preços baixos.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 20px;">
+                    <p style="font-size: 13px;">✨ Bem-vindo ao ACHOO! As notificações de ofertas relâmpago aparecerão aqui em breve.</p>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'favoritos') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>❤️ Seus Favoritos</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Produtos salvos para você acompanhar depois.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
+                    <p>Sua lista de favoritos está vazia.</p>
+                    <button class="btn btn-primary" style="margin-top: 15px;" onclick="switchView('store')">Explorar Vitrine</button>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'opinioes') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>⭐ Minhas Opiniões</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Avaliações e comentários feitos sobre as lojas parceiras e achados.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 30px; text-align: center;">
+                    <p>Você ainda não avaliou nenhum produto.</p>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'lojas') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>🏪 Lojas que Sigo</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Acompanhe as lojas oficiais e parceiras de afiliados favoritas.</p>
+                <div class="products-grid" style="margin-top: 20px;">
+                    <div class="product-card" style="padding: 20px; text-align: center;">
+                        <h4>Mercado Livre Oficial</h4>
+                        <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
+                        <span class="badge-tag green" style="display:inline-block;">Seguindo</span>
+                    </div>
+                    <div class="product-card" style="padding: 20px; text-align: center;">
+                        <h4>Amazon Brasil</h4>
+                        <p style="font-size: 12px; color: var(--gray-600); margin: 8px 0;">Parceiro verificado</p>
+                        <span class="badge-tag green" style="display:inline-block;">Seguindo</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'central-afiliados') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>🔗 Central de Afiliados e Criadores</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Gerencie seus links de indicação e monetize seus conteúdos.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 25px;">
+                    <h3 style="margin-bottom: 10px; font-size: 16px;">Como funciona?</h3>
+                    <p style="font-size: 13px; line-height: 1.5; color: var(--gray-600);">
+                        Cadastre seus produtos através do Painel Administrativo informando os seus links de afiliado (Amazon, Mercado Livre, Shopee, etc.). Suas comissões são geradas diretamente pelas plataformas oficiais de afiliados sem custo adicional para os compradores.
+                    </p>
+                    <button class="btn btn-primary" style="margin-top: 20px;" onclick="openAdminLogin()">Acessar Painel de Cadastro</button>
+                </div>
+            </div>
+        `;
+    } else if (state.currentView === 'supermercado') {
+        state.selectedCategory = 'Casa & Cozinha';
+        switchView('store');
+    } else if (state.currentView === 'configuracoes') {
+        main.innerHTML = `
+            <div class="admin-container">
+                <h2>⚙️ Configurações do Aplicativo</h2>
+                <p style="margin-top: 10px; color: var(--gray-600);">Ajustes gerais e gerenciamento de dados salvos.</p>
+                <div class="table-card" style="margin-top: 20px; padding: 25px; max-width: 600px;">
+                    <h4 style="margin-bottom: 10px; font-size: 14px;">Gerenciamento de Dados</h4>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: 12px;">
+                        <button class="btn btn-light" onclick="exportBackup()">📥 Exportar Backup (JSON)</button>
+                        <button class="btn btn-danger" onclick="resetFactoryData()">🔄 Restaurar Padrões</button>
+                    </div>
+                </div>
+            </div>
+        `;
     } else {
         const totalClicks = state.products.reduce((acc, p) => acc + (p.clicks || 0), 0);
         main.innerHTML = `
