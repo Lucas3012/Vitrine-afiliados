@@ -27,11 +27,45 @@ let state = {
                 { name: 'Malas e Bolsas', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=300&q=80' },
                 { name: 'Roupa Íntima e de Dormir', image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=300&q=80' },
                 { name: 'Calças', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=300&q=80' },
-                { name: 'Camisetas e Regatas', image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' }
+                { name: 'Camisetas e Regatas', image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Aces. Moda', image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Vestidos', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Bermudas e Shorts', image: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Moda Fitness', image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Agasalhos', image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Blusas', image: 'https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Camisas', image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Moda Praia', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Uniformes Trabalho e...', image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Saias', image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Leggings', image: 'https://images.unsplash.com/photo-1506629082925-2368c4676df1?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Ternos', image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=300&q=80' },
+                { name: 'Macacão', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80' }
             ]
         },
-        { name: 'Esportes e Fitness', subcategories: [{ name: 'Suplementos', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }] },
-        { name: 'Celulares e Telefones', subcategories: [{ name: 'Smartphones', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80' }] }
+        { name: 'Esportes e Fitness', subcategories: [{ name: 'Suplementos', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }, { name: 'Academia', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Joias e Relógios', subcategories: [{ name: 'Relógios', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Beleza e Saúde', subcategories: [{ name: 'Perfumes', image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Celulares e Telefones', subcategories: [{ name: 'Smartphones', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Móveis e Decoração', subcategories: [{ name: 'Salas', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Computação', subcategories: [{ name: 'Notebooks', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Videogames', subcategories: [{ name: 'Consoles', image: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Áudio e Vídeo', subcategories: [{ name: 'Fones', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Acessórios Veículos', subcategories: [{ name: 'Capacetes', image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Veículos', subcategories: [{ name: 'Carros', image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Construção', subcategories: [{ name: 'Ferramentas', image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Escritório e Papelaria', subcategories: [{ name: 'Cadernos', image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Eletrodomésticos', subcategories: [{ name: 'Air Fryer', image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Câmeras e Acessórios', subcategories: [{ name: 'Câmeras', image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Brinquedos e...', subcategories: [{ name: 'Bonecos', image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Livros', subcategories: [{ name: 'Ficção', image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Alimentos e Bebidas', subcategories: [{ name: 'Cafés', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Bebês', subcategories: [{ name: 'Carrinhos', image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Animais de estimação', subcategories: [{ name: 'Rações', image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Instrumentos...', subcategories: [{ name: 'Violões', image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Imóveis', subcategories: [{ name: 'Casas', image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Serviços', subcategories: [{ name: 'Manutenção', image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=300&q=80' }] },
+        { name: 'Outras categorias', subcategories: [{ name: 'Diversos', image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=300&q=80' }] }
     ],
     categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes'],
     settings: {
@@ -294,6 +328,14 @@ function render() {
         main.innerHTML = `<div class="admin-container"><h2>🔔 Notificações</h2><p style="margin-top:10px;">Nenhuma nova notificação de ofertas relâmpago.</p></div>`;
     } else if (state.currentView === 'compras') {
         main.innerHTML = `<div class="admin-container"><h2>🛍️ Minhas Compras</h2><p style="margin-top:10px;">Nenhum histórico de pedidos registrado.</p></div>`;
+    } else if (state.currentView === 'cupons') {
+        main.innerHTML = `<div class="admin-container"><h2>🎟️ Cupons Relâmpago</h2><p style="margin-top:10px;">Resgate cupons de desconto exclusivos para parceiros.</p></div>`;
+    } else if (state.currentView === 'opinioes') {
+        main.innerHTML = `<div class="admin-container"><h2>⭐ Minhas Opiniões</h2><p style="margin-top:10px;">Avaliações sobre suas compras e indicações.</p></div>`;
+    } else if (state.currentView === 'lojas') {
+        main.innerHTML = `<div class="admin-container"><h2>🏪 Lojas que Sigo</h2><p style="margin-top:10px;">Acompanhe vitrines parceiras.</p></div>`;
+    } else if (state.currentView === 'historico') {
+        main.innerHTML = `<div class="admin-container"><h2>🕒 Histórico</h2><p style="margin-top:10px;">Produtos visualizados recentemente.</p></div>`;
     } else if (state.currentView === 'central-afiliados') {
         main.innerHTML = `
             <div class="admin-container">
@@ -311,6 +353,11 @@ function render() {
                 `}
             </div>
         `;
+    } else if (state.currentView === 'supermercado') {
+        state.selectedCategory = 'Casa & Cozinha';
+        switchView('store');
+    } else if (state.currentView === 'configuracoes') {
+        main.innerHTML = `<div class="admin-container"><h2>⚙️ Configurações</h2><p style="margin-top:10px;">Ajustes de conta e preferências.</p></div>`;
     }
 }
 
