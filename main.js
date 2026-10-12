@@ -1,15 +1,14 @@
 // CONFIGURAÇÃO DO SUPABASE
-// Substitua pelas credenciais do seu projeto Supabase
-const SUPABASE_URL = ' SUA_URL_DO_SUPABASE_AQUI ';
-const SUPABASE_ANON_KEY = ' SUA_CHAVE_ANON_DO_SUPABASE_AQUI ';
+const SUPABASE_URL = 'https://lbqrxixkfnmbcgyyvdxp.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxicXJ4aXhrZm5tYmNneXl2ZHhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3Nzc0MzksImV4cCI6MjEwNzM1MzQzOX0.WkaQz_mLxlZBbOxNrc8bb2fmCAuXWZSYXYf9AzQpr00';
 
 let supabaseClient = null;
 try {
-    if (window.supabase && SUPABASE_URL !== 'SUA_URL_DO_SUPABASE_AQUI') {
+    if (window.supabase) {
         supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     }
 } catch(e) {
-    console.warn('Erro ao inicializar Supabase. Verifique as credenciais.');
+    console.warn('Erro ao inicializar Supabase.');
 }
 
 let state = {
@@ -125,7 +124,7 @@ async function handleAuthSubmit(e) {
     errEl.classList.add('hidden');
 
     if (!supabaseClient) {
-        errEl.innerText = 'Supabase não configurado. Adicione suas chaves no início do main.js';
+        errEl.innerText = 'Erro ao conectar com o Supabase.';
         errEl.classList.remove('hidden');
         return;
     }
@@ -330,7 +329,7 @@ function renderStoreProducts() {
             <div class="product-body">
                 <div class="product-title">${p.title}</div>
                 <div class="current-price">${formatCurrency(p.price)}</div>
-                <a href="${p.link}" target="_blank" class="btn btn-primary" style="width:1text-align:center;margin-top:10px;font-size:12px;" onclick="event.stopPropagation()">Ver Oferta</a>
+                <a href="${p.link}" target="_blank" class="btn btn-primary" style="width:100%;text-align:center;margin-top:10px;font-size:12px;" onclick="event.stopPropagation()">Ver Oferta</a>
             </div>
         </div>
     `).join('');
