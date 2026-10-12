@@ -6,7 +6,7 @@ let state = {
     sortBy: 'newest',
     categories: ['Todos', 'Eletrônicos', 'Moda', 'Casa & Cozinha', 'Beleza', 'Esportes', 'Ferramentas'],
     settings: {
-        siteName: 'MegaOfertas',
+        siteName: 'Mega Ofertas',
         tagline: 'Achados & Ofertas',
         heroTitle: 'Achados Imperdíveis & Ofertas Diárias',
         heroSubtitle: 'Os melhores produtos selecionados com desconto para você economizar.',
@@ -84,26 +84,19 @@ function saveToStorage() {
 function updateHeaderBranding() {
     document.getElementById('brandTitle').innerText = state.settings.siteName;
     document.getElementById('brandTagline').innerText = state.settings.tagline;
-    document.getElementById('footerBrandName').innerText = state.settings.siteName;
+    document.getElementById('footerBrandName').innerText = 'ACHOO - ' + state.settings.siteName;
     document.getElementById('footerDisclaimerText').innerText = state.settings.affiliateDisclaimer;
+}
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('leftSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('hidden');
 }
 
 function switchView(view) {
     state.currentView = view;
-    const searchContainer = document.getElementById('searchContainer');
-    const adminBtn = document.getElementById('adminBtn');
-
-    if (view === 'admin') {
-        searchContainer.classList.add('hidden');
-        adminBtn.innerHTML = '🏪 Ver Vitrine';
-        adminBtn.className = 'btn btn-primary';
-        adminBtn.setAttribute('onclick', "switchView('store')");
-    } else {
-        searchContainer.classList.remove('hidden');
-        adminBtn.innerHTML = '🔒 Painel Admin';
-        adminBtn.className = 'btn btn-light';
-        adminBtn.setAttribute('onclick', 'openAdminLogin()');
-    }
     render();
 }
 
@@ -143,6 +136,12 @@ function render() {
             </section>
 
             <div id="vitrine" class="container">
+                <!-- Barra de pesquisa comprida e arredondada acima das categorias -->
+                <div class="search-box-top">
+                    <span class="search-icon-top">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Buscar produtos, marcas e muito mais..." value="${state.searchQuery}" oninput="handleSearch(event)">
+                </div>
+
                 <div class="categories-bar">
                     ${state.categories.map(cat => `
                         <button class="cat-btn ${state.selectedCategory === cat ? 'active' : ''}" onclick="selectCategory('${cat}')">${cat}</button>
@@ -177,7 +176,7 @@ function render() {
                         <h2>Painel Administrativo</h2>
                         <p>Gerencie seus produtos, links de afiliado e configurações.</p>
                     </div>
-                    <button class="btn btn-danger" onclick="logoutAdmin()">Sair</button>
+                    <button class="btn btn-primary" onclick="switchView('store')">🏪 Voltar à Vitrine</button>
                 </div>
 
                 <div class="flex gap-2" style="margin-bottom: 20px;">
@@ -218,7 +217,7 @@ function render() {
                         </div>
                         <div style="overflow-x: auto;">
                             <table>
-                               <thead>
+                                <thead>
                                     <tr>
                                         <th>Produto</th>
                                         <th>Categoria</th>
@@ -406,10 +405,6 @@ function handleLogin(e) {
     } else {
         document.getElementById('loginErrorMsg').classList.remove('hidden');
     }
-}
-
-function logoutAdmin() {
-    switchView('store');
 }
 
 function setAdminTab(tab) {

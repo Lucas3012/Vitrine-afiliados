@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Ofertas & Afiliados</title>
+    <title>ACHOO - Vitrine de Ofertas & Afiliados</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Estilos CSS -->
@@ -14,30 +14,45 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <div class="logo-area" onclick="switchView('store')">
-                <div class="logo-icon">
-                    <img src="logo.jpg" alt="ACHOO Logo" class="brand-logo-img">
-                </div>
-                <div class="logo-text">
-                    <h1 id="brandTitle">ACHOO</h1>
+            <!-- Botão Menu Hamburguer (Esquerda) -->
+            <button class="menu-toggle-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <!-- Título / Marca Centralizado -->
+            <div class="logo-area center-brand" onclick="switchView('store')">
+                <div class="logo-text text-center">
+                    <span class="main-brand-title">ACHOO</span>
+                    <h1 id="brandTitle">Mega Ofertas</h1>
                     <p id="brandTagline">Achados & Ofertas</p>
                 </div>
             </div>
 
-            <!-- Search Bar -->
-            <div class="search-box" id="searchContainer">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="searchInput" placeholder="Buscar produtos, marcas e muito mais..." oninput="handleSearch(event)">
-            </div>
-
-            <!-- Nav Actions -->
-            <div class="flex gap-2">
-                <button id="adminBtn" class="btn btn-light" onclick="openAdminLogin()">
-                    🔒 <span id="adminBtnText">Painel Admin</span>
-                </button>
+            <!-- Logo (Direita) -->
+            <div class="logo-area-right" onclick="switchView('store')">
+                <div class="logo-icon">
+                    <img src="logo.jpg" alt="ACHOO Logo" class="brand-logo-img">
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Menu Lateral Esquerdo (Sidebar) -->
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <aside id="leftSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu ACHOO</h3>
+            <button class="btn btn-light" style="padding: 2px 6px;" onclick="toggleSidebar()">✕</button>
+        </div>
+        <div class="sidebar-body">
+            <button class="btn btn-primary sidebar-btn" onclick="toggleSidebar(); switchView('store')">
+                🏪 Ver Vitrine
+            </button>
+            <button class="btn btn-light sidebar-btn" onclick="toggleSidebar(); openAdminLogin()">
+                🔒 Painel Admin
+            </button>
+        </div>
+    </aside>
 
     <!-- Main Content Area -->
     <main id="mainContent" style="flex: 1;">
@@ -48,7 +63,7 @@
     <footer id="footerSection">
         <div class="container footer-inner">
             <div class="flex gap-2" style="align-items: center;">
-                <span style="font-weight:700;font-size:15px;" id="footerBrandName">ACHOO</span>
+                <span style="font-weight:700;font-size:15px;" id="footerBrandName">ACHOO - Mega Ofertas</span>
             </div>
             <div class="footer-disclaimer" id="footerDisclaimerText">
                 Este site participa de programas de afiliados (Amazon, Shopee, Mercado Livre, etc.). Podemos receber comissões por compras qualificadas realizadas através dos nossos links, sem custo adicional para você.
