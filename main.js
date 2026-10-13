@@ -84,7 +84,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "62% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_958405-MLB117542422094_102026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/redmi-note-17-pro-max-512gb-8gb8gb-bateria-10000-mah-global/up/MLBU5155049058?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5209192309&sid=affiliates",
+          "link": "https://meli.la/1Mo2mF9",
           "clicks": 0
         },
 {
@@ -95,7 +95,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "77% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_865947-MLU75482181449_032024-AB.webp",
-          "link": "https://www.mercadolivre.com.br/impressora-3d-creality-ender-3-v3-se-fdm-250mms-impressao/p/MLB35142061?pdp_filters=item_id%3AMLB4727879779&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4727879779&sid=affiliates",
+          "link": "https://meli.la/2joP4Y9",
           "clicks": 0
         },
 {
@@ -106,7 +106,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "74% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_819112-MLA114248484981_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-smartwatch-forestory-inteligente-tela-183-bluetooth-ip68-prova-dagua-notificacoes-chamadas-saude-smart-watch-relogio-corrida-com-android-e-ios-com-2-pulseiras-feminino-masculino/p/MLB75079337?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4860612123&sid=affiliates",
+          "link": "https://meli.la/2SfGx4e",
           "clicks": 0
         },
 {
@@ -117,7 +117,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "76% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_879018-MLA117877454469_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/suporte-magnetico-para-celular-com-ventosa-de-vacuo-ajustavel-360-universal-para-carro-painel-vidro-mesa-e-superficies-com-fixacao-forte-para-smartphone-e-uso-veicular-e-ajuste-pratico-swave/p/MLB66585314?pdp_filters=item_id%3AMLB4542401423&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4542401423&sid=affiliates",
+          "link": "https://meli.la/34fBUaU",
           "clicks": 0
         },
 {
@@ -128,7 +128,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "72% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_805619-MLA109050164215_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/smartwatch-novante-ht-1287-com-tela-curva-amoled-de-195-e-chamadas-bluetooth-ip68/p/MLB66699452?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6467529110&sid=affiliates",
+          "link": "https://meli.la/2zdqDoD",
           "clicks": 0
         },
 {
@@ -139,7 +139,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "71% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_806194-MLA105593417435_012026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/smartwatch-huawei-band-10-caixa-de-polimeros-duraveis-analise-do-sono-em-nivel-profissional-assistente-de-bem-estar-emocional-relogio-smartwatch-compativel-com-android-e-ios-rosa/p/MLB46211942?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7738891478&sid=affiliates",
+          "link": "https://meli.la/2khc7C6",
           "clicks": 0
         },
 {
@@ -150,7 +150,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "71% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_834366-MLB111594940950_062026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/projetor-portatil-bettdowac1093pro-350ansi-4kgtv-com-netflix/up/MLBU3995584051?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6836118308&sid=affiliates",
+          "link": "https://meli.la/1a1bd6c",
           "clicks": 0
         },
 {
@@ -161,7 +161,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_846832-MLA115693573446_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fone-de-ouvido-bluetooth-bateria-de-longa-duracao-pro-4-branco-conecta-rapido-fast-plug-com-case-carregador-e-microfone/p/MLB25263382?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7159195230&sid=affiliates",
+          "link": "https://meli.la/1zFyw8D",
           "clicks": 0
         },
 {
@@ -172,7 +172,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "66% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_962383-MLA116565848952_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/adaptador-receptor-bluetooth-54-xiaowei-usb-para-pc-notebook-conecta-ate-7-dispositivos-simultaneos-gamer-trabalho-estudo/p/MLB55579936?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5859599216&sid=affiliates",
+          "link": "https://meli.la/27aCjyc",
           "clicks": 0
         },
 {
@@ -183,7 +183,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_682582-MLB115459166700_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/smartwatch-alexa-bluetooth-chamada-tela-183-ip68-120-esport/up/MLBU4391085803?pdp_filters=item_id%3AMLB7233878562&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB7233878562&sid=affiliates",
+          "link": "https://meli.la/2vwfLvj",
           "clicks": 0
         },
 {
@@ -194,7 +194,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "67% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_692805-MLA115517949733_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-inteligente-smartwatch-gps-autonomo-ip68-3atm-prova-dagua-850mah-preto-novante-digital-feminino-masculino-esportivo-android-ios-notificacoes-instantaneas-bluetooth-chamadas-lanterna-bussola/p/MLB76223619?pdp_filters=item_id%3AMLB7339961302&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB7339961302&sid=affiliates",
+          "link": "https://meli.la/1NYc7zn",
           "clicks": 0
         },
 {
@@ -205,7 +205,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "67% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_874071-MLB109386995843_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-inteligente-smartwatch-redondo-peje-pro-amoled-nfc/up/MLBU3856828711?pdp_filters=item_id%3AMLB6507871556&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6507871556&sid=affiliates",
+          "link": "https://meli.la/2oEVmvh",
           "clicks": 0
         },
 {
@@ -216,7 +216,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "65% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_885015-MLA116702280731_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fone-ouvido-bluetooth-53-tws-m10-a-prova-d-agua-microfone/p/MLB62744323?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5125217849&sid=affiliates",
+          "link": "https://meli.la/2mtQjrK",
           "clicks": 0
         },
 {
@@ -227,7 +227,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_880437-MLA96183538683_102025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/smartwatch-multi-l2-tela-183-protecao-ip67-rose-wr203/p/MLB35460348?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6248241610&sid=affiliates",
+          "link": "https://meli.la/26Qz1dU",
           "clicks": 0
         },
 {
@@ -238,7 +238,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "65% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_987904-MLA114643497781_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fone-open-ear-dapon-dpf25-bluetooth-60-sem-fio-com-microfone-enc-6h-tempo-de-espera-de-ate-200-horas-cor-preto/p/MLB62953439?pdp_filters=item_id%3AMLB6582757530&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6582757530&sid=affiliates",
+          "link": "https://meli.la/1VfxP7N",
           "clicks": 0
         },
 {
@@ -249,7 +249,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "61% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_776330-MLA117666047699_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/controle-sem-fio-bluetooth-para-p4-joystick-gamepad-manete-gamer-compativel-pc-notebook-smart-tv-android-celular-touchpad-vibracao-bateria-recarregavel-entrada-p2-preto-gatao/p/MLB79329059?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4807689623&sid=affiliates",
+          "link": "https://meli.la/2KYfS2p",
           "clicks": 0
         },
 {
@@ -260,7 +260,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "59% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_636256-MLA99984790479_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/caixa-de-som-bluetooth-grande-alto-falante-8-1000w-pmpo-saida-10w/p/MLB38481201?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5800990264&sid=affiliates",
+          "link": "https://meli.la/1wZhaBH",
           "clicks": 0
         },
 {
@@ -271,7 +271,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "62% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_955449-MLA99506531294_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/volante-gamer-pc-ps4-ps3-xbox-series-xsone-nintendo-cor-preto/p/MLB44883668?pdp_filters=item_id%3AMLB5005913087&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5005913087&sid=affiliates",
+          "link": "https://meli.la/33jRSpV",
           "clicks": 0
         },
 {
@@ -282,7 +282,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "59% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_996829-MLU78614455458_082024-AB.webp",
-          "link": "https://www.mercadolivre.com.br/jbl-caixa-de-som-go-4-black-prova-dagua-cor-preto/p/MLB36386053?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4039592137&sid=affiliates",
+          "link": "https://meli.la/1aL1t3W",
           "clicks": 0
         },
 {
@@ -293,7 +293,7 @@ let state = {
           "category": "Eletrônicos",
           "badge": "59% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_994322-MLA99533174096_122025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/smart-tv-aiwa-43-android-full-hd-borda-ultrafina-hdr10-dolby-audio-aws-tv-43-bl-02-a/p/MLB20662382?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5305393609&sid=affiliates",
+          "link": "https://meli.la/2SYeBvV",
           "clicks": 0
         },
 {
@@ -304,7 +304,7 @@ let state = {
           "category": "Moda",
           "badge": "22% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_699374-MLB82078566201_012025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/colar-feminino-ponto-de-luz-zirconia-folheado-a-ouro18k/up/MLBU2978670264?pdp_filters=item_id%3AMLB5265664382&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5265664382&sid=affiliates",
+          "link": "https://meli.la/2oYUmW7",
           "clicks": 0
         },
 {
@@ -315,7 +315,7 @@ let state = {
           "category": "Moda",
           "badge": "76% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_722310-MLB88477282950_072025-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-5525239412-macaquinho-virginia-poli-zero-transparencia-fitness-_JM?searchVariation=184430248250&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/1yKtK3i",
           "clicks": 0
         },
 {
@@ -326,7 +326,7 @@ let state = {
           "category": "Moda",
           "badge": "69% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_731345-MLB117872112409_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/legging-trifil-original-feminina-texturizada-sem-costura/up/MLBU4730459721?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7425801296&sid=affiliates",
+          "link": "https://meli.la/2WC5EoZ",
           "clicks": 0
         },
 {
@@ -337,7 +337,7 @@ let state = {
           "category": "Moda",
           "badge": "70% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_856931-MLB118561877093_102026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-4524527847-tnis-asics-revelation-couro-corrida-caminhada-treino-barato-_JM?searchVariation=191321002196&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/2bDbGS2",
           "clicks": 0
         },
 {
@@ -348,7 +348,7 @@ let state = {
           "category": "Moda",
           "badge": "69% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_976300-MLB115634964148_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/chinelo-kenner-rakka-masculino-confortavel-original-macio/up/MLBU5096829930?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7579517726&sid=affiliates",
+          "link": "https://meli.la/2apEwWp",
           "clicks": 0
         },
 {
@@ -359,7 +359,7 @@ let state = {
           "category": "Moda",
           "badge": "70% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_629879-MLB114160385059_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/tenis-mizuno-academia-creation-caminhada-macio-treino-oferta/up/MLBU5317638990?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5296064277&sid=affiliates",
+          "link": "https://meli.la/1krW85t",
           "clicks": 0
         },
 {
@@ -370,7 +370,7 @@ let state = {
           "category": "Moda",
           "badge": "68% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_637856-MLA95736961618_102025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-anel-euro-dourado-unique-eu2035yyi4d-em-aco-com-aro-de-pedras-feminino/p/MLB49289075?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4918633873&sid=affiliates",
+          "link": "https://meli.la/1wZyXnk",
           "clicks": 0
         },
 {
@@ -381,7 +381,7 @@ let state = {
           "category": "Moda",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_793055-MLA115825214508_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/mochila-masculina-grande-notebook-impermeavel-reforcada-woosh/p/MLB25980994?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7339014400&sid=affiliates",
+          "link": "https://meli.la/1GPvHqG",
           "clicks": 0
         },
 {
@@ -392,7 +392,7 @@ let state = {
           "category": "Moda",
           "badge": "62% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_604469-MLB114757997039_072026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-4910781175-tenis-sneaker-drx-masculino-macio-leve-moda-stretwear-casual-_JM?searchVariation=205366895841&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/2PLAuHf",
           "clicks": 0
         },
 {
@@ -403,7 +403,7 @@ let state = {
           "category": "Moda",
           "badge": "69% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_641101-MLA114384147135_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-casio-vintage-aq-230a-7a-de-aco-inoxidavel-prateado/p/MLB32547331?pdp_filters=item_id%3AMLB7753557674&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB7753557674&sid=affiliates",
+          "link": "https://meli.la/1hFnjvC",
           "clicks": 0
         },
 {
@@ -414,7 +414,7 @@ let state = {
           "category": "Moda",
           "badge": "58% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_608724-MLB116321817206_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-2-calca-academia-poliamida-elastano-jogger-masculina/up/MLBU5194770963?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5250564865&sid=affiliates",
+          "link": "https://meli.la/2iiFEmt",
           "clicks": 0
         },
 {
@@ -425,7 +425,7 @@ let state = {
           "category": "Moda",
           "badge": "60% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_651946-MLB88875003229_072025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/tornozeleiras-folheadas-ouro-18k-singapura-coracao-presente/up/MLBU3277123990?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5477012494&sid=affiliates",
+          "link": "https://meli.la/2nNKtqj",
           "clicks": 0
         },
 {
@@ -436,7 +436,7 @@ let state = {
           "category": "Moda",
           "badge": "65% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_612537-MLB109782495621_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/vestido-feminino-longo-alca-fina-estampado-detalhe-bolsos/up/MLBU3877759347?pdp_filters=item_id%3AMLB6572893930&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6572893930&sid=affiliates",
+          "link": "https://meli.la/2rxMKLw",
           "clicks": 0
         },
 {
@@ -447,7 +447,7 @@ let state = {
           "category": "Moda",
           "badge": "65% OFF com Cupom",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_697845-MLB112579248699_062026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-3137291666-alianca-prata-feminina-masculina-fina-namoro-compromisso-3mm-_JM?searchVariation=176372772585&pdp_filters=item_id%3AMLB3137291666&extra_comm=true&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/2LnPcxa",
           "clicks": 0
         },
 {
@@ -458,7 +458,7 @@ let state = {
           "category": "Moda",
           "badge": "25% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_609812-MLB108736522538_032026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-4454271255-tnis-feminino-casual-sola-alta-moda-tendncia-_JM?searchVariation=190033674514&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/1YunoBL",
           "clicks": 0
         },
 {
@@ -469,7 +469,7 @@ let state = {
           "category": "Moda",
           "badge": "58% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_927298-MLA104676235693_012026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/relogio-technos-masculino-quartzo-aco-inoxidavel-resistente-agua-prata/p/MLB22816858?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6896310520&sid=affiliates",
+          "link": "https://meli.la/27xxcsm",
           "clicks": 0
         },
 {
@@ -480,7 +480,7 @@ let state = {
           "category": "Moda",
           "badge": "55% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_740026-MLB86614660221_062025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-4-bermuda-shorts-tactel-sandrini-elastano-academia-praia/up/MLBU3250896717?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6072991756&sid=affiliates",
+          "link": "https://meli.la/1xXx9ux",
           "clicks": 0
         },
 {
@@ -491,7 +491,7 @@ let state = {
           "category": "Moda",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_806084-MLB113440223416_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/conjunto-colar-e-brinco-gota-azul-a-ouro-18k-fique-linda/up/MLBU3673225083?pdp_filters=item_id%3AMLB4364754535&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4364754535&sid=affiliates",
+          "link": "https://meli.la/1uUmvq1",
           "clicks": 0
         },
 {
@@ -502,7 +502,7 @@ let state = {
           "category": "Moda",
           "badge": "50% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_978253-MLB108366225803_032026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-4069819017-tnis-fila-maxxi-lite-masculino-leve-confortavel-original-_JM?searchVariation=183685236508&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/2JSCb9s",
           "clicks": 0
         },
 {
@@ -513,7 +513,7 @@ let state = {
           "category": "Moda",
           "badge": "51% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_796435-MLB114605939317_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/tenis-masculino-esportivo-olimpic-academia-caminhada-promoca/up/MLBU3914952759?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4631450199&sid=affiliates",
+          "link": "https://meli.la/2hktURX",
           "clicks": 0
         },
 {
@@ -524,7 +524,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "77% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_619021-MLA118179806341_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/mixer-eletrico-portatil-2-em-1-recarregavel-potente-misturador-de-bebidas-e-ovos-3-velocidades-usb-batedor-e-fue-fouet-woosh/p/MLB20306137?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7619457210&sid=affiliates",
+          "link": "https://meli.la/1jCmyqU",
           "clicks": 0
         },
 {
@@ -535,7 +535,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "72% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_701411-MLA118019551713_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/chuveiro-ducha-lorenzetti-loren-shower-eletronico-branco-6800w-220v/p/MLB19765518?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4391891067&sid=affiliates",
+          "link": "https://meli.la/2Z7YWKh",
           "clicks": 0
         },
 {
@@ -546,7 +546,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "71% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_779801-MLA99445789764_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/chuveiro-eletrico-de-parede-lorenzetti-futura-multitemperaturas-branco-6800w/p/MLB15480890?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4262286021&sid=affiliates",
+          "link": "https://meli.la/2HRoBCE",
           "clicks": 0
         },
 {
@@ -557,7 +557,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "73% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_891709-MLA115068451649_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/wap-air-heat-fw009371-aquecedor-eletrico-portatil-3-em-1-220v-potencia-2000w-triplo-sistema-seguranca/p/MLB23244105?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7236460650&sid=affiliates",
+          "link": "https://meli.la/1pMzhrA",
           "clicks": 0
         },
 {
@@ -568,7 +568,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_834599-MLA110520212053_042026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/eps-158-kit-faqueiro-dourado-luxo-jogo-talheres-inox-24pcs-maleta-sem-estampa/p/MLB68130482?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6631649708&sid=affiliates",
+          "link": "https://meli.la/2bhZvNt",
           "clicks": 0
         },
 {
@@ -579,7 +579,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "66% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_704151-MLB116985411119_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/cadeira-de-escritorio-begonia-tela-mesh-ergonomica-giratoria/up/MLBU3779321624?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4462175099&sid=affiliates",
+          "link": "https://meli.la/2aP9iqh",
           "clicks": 0
         },
 {
@@ -590,7 +590,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "72% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_798833-MLA99962055785_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/sanduicheira-multilaser-grill-gourmet-750w-preta-ce043-cor-preto/p/MLB28010263?pdp_filters=item_id%3AMLB7408240786&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB7408240786&sid=affiliates",
+          "link": "https://meli.la/2k67Ad4",
           "clicks": 0
         },
 {
@@ -601,7 +601,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "64% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_791663-MLA114390069787_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/armario-de-cozinha-poliman-sicilia-medio-5-portas-e-2-gavetas-freijo-off/p/MLB65559905?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6661898742&sid=affiliates",
+          "link": "https://meli.la/1KwEJAa",
           "clicks": 0
         },
 {
@@ -612,7 +612,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "66% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_775407-MLA99776749612_122025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fritadeira-sem-oleo-air-fryer-4l-mondial-1500w-afn-40-bft/p/MLB22530387?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4671001438&sid=affiliates",
+          "link": "https://meli.la/1Lxkene",
           "clicks": 0
         },
 {
@@ -623,7 +623,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "62% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_941219-MLA112602385648_062026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/jogo-6-tacas-de-cristal-340ml-diamond-transparente-lapidado-vitrex/p/MLB65966192?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4645173983&sid=affiliates",
+          "link": "https://meli.la/1RaM8yV",
           "clicks": 0
         },
 {
@@ -634,7 +634,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_927792-MLB91185357960_092025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/camera-seguranca-ip-externa-wifi-a28-app-icsee-a-prova-dagua/up/MLBU3403280878?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4188994271&sid=affiliates",
+          "link": "https://meli.la/1ce53Kw",
           "clicks": 0
         },
 {
@@ -645,7 +645,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "68% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_854633-MLA119226640033_102026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/varal-de-chao-grande-de-roupas-3-andares-dobravel-cor-azul-kontuz-170-cm/p/MLB26417959?pdp_filters=item_id%3AMLB3421967823&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB3421967823&sid=affiliates",
+          "link": "https://meli.la/2xK2cXn",
           "clicks": 0
         },
 {
@@ -656,7 +656,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "65% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_875388-MLA82462695501_022025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fritadeira-air-fryer-oven-philco-paf16a-16l-4-em-1--220v/up/MLBU3291001799?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5496521976&sid=affiliates",
+          "link": "https://meli.la/1zyG8Ro",
           "clicks": 0
         },
 {
@@ -667,7 +667,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "60% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_758173-MLB116007686618_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/armario-de-cozinha-completo-5-portas-1-gaveta-com-nichos/up/MLBU4397561655?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4936736869&sid=affiliates",
+          "link": "https://meli.la/21qRJ2w",
           "clicks": 0
         },
 {
@@ -678,7 +678,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_872935-MLA99966963747_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/panela-de-pressao-mecanica-preta-e-inox-4l-midea-cor-cinza/p/MLB45406063?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7015969038&sid=affiliates",
+          "link": "https://meli.la/2Q2SkQU",
           "clicks": 0
         },
 {
@@ -689,7 +689,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_646462-MLA89509974686_082025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/fritadeira-eletrica-air-fryer-wap-wafg2s-5-litros-com-revestimento-antiaderente-1500w-220v/p/MLB53767795?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5886831522&sid=affiliates",
+          "link": "https://meli.la/1AMNATZ",
           "clicks": 0
         },
 {
@@ -700,7 +700,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "63% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_645073-MLB114013970360_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/escorredor-de-pratos-louca-preto-cozinha-suspensa-65cm-18pcs/up/MLBU3164642850?pdp_filters=item_id%3AMLB5377321364&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5377321364&sid=affiliates",
+          "link": "https://meli.la/2NinuQ2",
           "clicks": 0
         },
 {
@@ -711,7 +711,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "56% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_746561-MLA111291534913_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/torneira-gourmet-luxo-flexivel-cozinha-parede-2-jatos-pia-metal-cor-aco-inox-e-preto-marca-camperluz/p/MLB45553868?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3954862383&sid=affiliates",
+          "link": "https://meli.la/1c5zywX",
           "clicks": 0
         },
 {
@@ -722,7 +722,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "56% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_967733-MLA114241563568_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/armario-de-cozinha-completa-compacta-5-portas-em-mdf-cinamomooff-white-blue-moby/p/MLB76321227?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7328287362&sid=affiliates",
+          "link": "https://meli.la/2Pi9sEm",
           "clicks": 0
         },
 {
@@ -733,7 +733,7 @@ let state = {
           "category": "Casa & Cozinha",
           "badge": "61% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_750371-MLA116617370667_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/balanca-digital-bioimpedancia-profissional-smart-imc-180kg-bluetooth-corporal-aparelho-alta-capacidade-aplicativo-app-para-android-e-para-ios-balanca-de-banheiro-academia/p/MLB54514525?pdp_filters=item_id%3AMLB4189368533&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4189368533&sid=affiliates",
+          "link": "https://meli.la/2J5Mp54",
           "clicks": 0
         },
 {
@@ -744,7 +744,7 @@ let state = {
           "category": "Beleza",
           "badge": "72% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_855365-MLB95050151929_102025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/gloss-fran-by-franciny-ehlke-liphoney-mel/up/MLBU2980829097?pdp_filters=item_id%3AMLB5270050920&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5270050920&sid=affiliates",
+          "link": "https://meli.la/1Mwpinp",
           "clicks": 0
         },
 {
@@ -755,7 +755,7 @@ let state = {
           "category": "Beleza",
           "badge": "65% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_608043-MLA99960994505_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/aparador-de-pelos-saco-homem-p-dagua-barberpro-ultra-intimos/p/MLB51528458?pdp_filters=item_id%3AMLB5298180863&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5298180863&sid=affiliates",
+          "link": "https://meli.la/2JmoHbn",
           "clicks": 0
         },
 {
@@ -766,7 +766,7 @@ let state = {
           "category": "Beleza",
           "badge": "56% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_747071-MLA112400438167_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/brae-essential-oil-blend-reparacao-e-protecao-termica-60ml/p/MLB23637314?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3948206575&sid=affiliates",
+          "link": "https://meli.la/2WbnYHL",
           "clicks": 0
         },
 {
@@ -777,7 +777,7 @@ let state = {
           "category": "Beleza",
           "badge": "62% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_666525-MLB85597283317_062025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-fran-love-kit-gloss-labial-e-lapis-labial-by-franciny/p/MLB2081604757?pdp_filters=item_id%3AMLB6620238180&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6620238180&sid=affiliates",
+          "link": "https://meli.la/1aDAnV9",
           "clicks": 0
         },
 {
@@ -788,7 +788,7 @@ let state = {
           "category": "Beleza",
           "badge": "61% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_842770-MLA116205993339_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-gloss-hidratante-labial-franboesa-gloss-labial-lip-bunny-triple-chocolate-fran-by-franciny-ehlke/p/MLB77363281?pdp_filters=item_id%3AMLB5065378337&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5065378337&sid=affiliates",
+          "link": "https://meli.la/1H9sgMx",
           "clicks": 0
         },
 {
@@ -799,7 +799,7 @@ let state = {
           "category": "Beleza",
           "badge": "52% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_819266-MLU72775679269_112023-AB.webp",
-          "link": "https://www.mercadolivre.com.br/perfume-masculino-boss-bottled-eua-de-parfum-100ml-hugo-boss/p/MLB19174901?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4595946208&sid=affiliates",
+          "link": "https://meli.la/1CRgXQj",
           "clicks": 0
         },
 {
@@ -810,7 +810,7 @@ let state = {
           "category": "Beleza",
           "badge": "53% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_862309-MLB109042590357_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/perfume-arabe-asad-bourbon-100ml--marca-isabelle-la-belle--fixacao-intensa-notas-amadeiradas-marcantes-e-elegancia-masculina/up/MLBU3142068675?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5365746416&sid=affiliates",
+          "link": "https://meli.la/1GdgUSr",
           "clicks": 0
         },
 {
@@ -821,7 +821,7 @@ let state = {
           "category": "Beleza",
           "badge": "51% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_656662-MLA87309865848_072025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/perfume-feminino-lancome-miracle-edp-50ml/p/MLB6093565?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3822717077&sid=affiliates",
+          "link": "https://meli.la/2dnr4Du",
           "clicks": 0
         },
 {
@@ -832,7 +832,7 @@ let state = {
           "category": "Beleza",
           "badge": "50% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_906529-MLA115584916886_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/creme-multirreparador-pele-sensivel-cicaplast-baume-b5-la-roche-posay-20ml/p/MLB25904875?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3954266250&sid=affiliates",
+          "link": "https://meli.la/2eHZLTP",
           "clicks": 0
         },
 {
@@ -843,7 +843,7 @@ let state = {
           "category": "Beleza",
           "badge": "50% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_738685-MLA100002770137_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/cortador-de-cabelo-mondial-super-groom-6-bg-04-melhor-categ-pretoverde/p/MLB54944960?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4382481094&sid=affiliates",
+          "link": "https://meli.la/2NA46Go",
           "clicks": 0
         },
 {
@@ -854,7 +854,7 @@ let state = {
           "category": "Beleza",
           "badge": "50% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_979648-MLA116569704466_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/perfume-da-noiva-arabe-durrat-all-aroos-85-ml-edp/p/MLB19906501?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6530111268&sid=affiliates",
+          "link": "https://meli.la/1312QQ3",
           "clicks": 0
         },
 {
@@ -865,7 +865,7 @@ let state = {
           "category": "Beleza",
           "badge": "49% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_605503-MLA114497234356_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/loreal-paris-elseve-oleo-extraordinario-100ml-leave-in-anti-frizz-protetor-termico-tratamento-reconstrutor-para-todos-os-tipos-de-cabelo/p/MLB26080271?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3956803727&sid=affiliates",
+          "link": "https://meli.la/21Qn7i2",
           "clicks": 0
         },
 {
@@ -876,7 +876,7 @@ let state = {
           "category": "Beleza",
           "badge": "48% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_761502-MLB113976307942_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/escova-secadora-profissional-1200w-3-em-1-alisa-modela-seca/up/MLBU4502458000?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7283887318&sid=affiliates",
+          "link": "https://meli.la/1xXFEHK",
           "clicks": 0
         },
 {
@@ -887,7 +887,7 @@ let state = {
           "category": "Beleza",
           "badge": "49% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_698757-MLB82072269017_012025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kaiak-masculino-tradicional-natura-desodorante-colonia-perfume-classico-original-100ml/up/MLBU2978815028?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB3958162017&sid=affiliates",
+          "link": "https://meli.la/2XBDXQ7",
           "clicks": 0
         },
 {
@@ -898,7 +898,7 @@ let state = {
           "category": "Beleza",
           "badge": "49% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_831743-MLA91145912643_082025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/armani-beauty-perfume-masculino-acqua-di-gi-profondo-parfum-50ml/p/MLB38044821?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4462344543&sid=affiliates",
+          "link": "https://meli.la/2MsdgbV",
           "clicks": 0
         },
 {
@@ -909,7 +909,7 @@ let state = {
           "category": "Beleza",
           "badge": "48% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_774946-MLA106898902116_022026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-presente-cuide-se-bem-deleite-o-boticario-3-itens/p/MLB65929649?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6513043352&sid=affiliates",
+          "link": "https://meli.la/1AXqC7x",
           "clicks": 0
         },
 {
@@ -920,7 +920,7 @@ let state = {
           "category": "Beleza",
           "badge": "48% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_753132-MLA99450295832_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/mascara-de-reconstrucao-profunda-para-cabelos-danificados-forca-e-elasticidade-resistance-therapiste-kerastase-200ml/p/MLB19462412?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4592569844&sid=affiliates",
+          "link": "https://meli.la/11C1zxP",
           "clicks": 0
         },
 {
@@ -931,7 +931,7 @@ let state = {
           "category": "Beleza",
           "badge": "46% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_658406-MLA117339689810_102026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-eudora-siage-cica-therapy-shampoo-250ml-mascara-250g/p/MLB32387819?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7046048948&sid=affiliates",
+          "link": "https://meli.la/2dFx7uu",
           "clicks": 0
         },
 {
@@ -942,7 +942,7 @@ let state = {
           "category": "Beleza",
           "badge": "53% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_911550-MLB115259230324_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/maquina-de-cortar-cabelo-profissional-kemei-km2606-bivolt/up/MLBU3271702105?pdp_filters=item_id%3AMLB4115661871&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4115661871&sid=affiliates",
+          "link": "https://meli.la/2mgSVz1",
           "clicks": 0
         },
 {
@@ -953,7 +953,7 @@ let state = {
           "category": "Beleza",
           "badge": "45% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_753868-MLA92374541270_092025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/perfume-feminino-lancome-idole-edt-50ml/p/MLB41040173?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5176316806&sid=affiliates",
+          "link": "https://meli.la/2psRrKX",
           "clicks": 0
         },
 {
@@ -964,7 +964,7 @@ let state = {
           "category": "Esportes",
           "badge": "67% OFF com Cupom",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_930984-MLA115093589860_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/polares-z20-patinete-eletrico-premium-500w-pneu-aderente-velocidade-maxima-32kmh-motorizado-ate-30km-de-autonomia-polares/p/MLB62833119?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7216331562&sid=affiliates",
+          "link": "https://meli.la/1UG9mMf",
           "clicks": 0
         },
 {
@@ -975,7 +975,7 @@ let state = {
           "category": "Esportes",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_707080-MLB114235277164_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/bicicleta-ergometrica-spinning-bike-ergometrica-its-x11/up/MLBU4558536627?pdp_filters=item_id%3AMLB4990152001&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4990152001&sid=affiliates",
+          "link": "https://meli.la/2TVcx7H",
           "clicks": 0
         },
 {
@@ -986,7 +986,7 @@ let state = {
           "category": "Esportes",
           "badge": "60% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_893745-MLA99613302440_122025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/alavancas-cambio-x-time-ez-fire-21v-3x7-marchas-aluminio/p/MLB27070993?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4938269417&sid=affiliates",
+          "link": "https://meli.la/1JDdDuj",
           "clicks": 0
         },
 {
@@ -997,7 +997,7 @@ let state = {
           "category": "Esportes",
           "badge": "68% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_697835-MLA117269994412_102026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/creatina-100g-creatina-monohidratada-max-titanium-sem-sabor-alta-pureza/p/MLB18630341?pdp_filters=item_id%3AMLB4057050248&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4057050248&sid=affiliates",
+          "link": "https://meli.la/1LjpcD8",
           "clicks": 0
         },
 {
@@ -1008,7 +1008,7 @@ let state = {
           "category": "Esportes",
           "badge": "66% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_778316-MLB115759692685_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/garrafa-termica-inox-900ml-tampa-flip-straw-canudo-com-alca/up/MLBU4608076933?pdp_filters=item_id%3AMLB5011896793&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5011896793&sid=affiliates",
+          "link": "https://meli.la/1wcgfZQ",
           "clicks": 0
         },
 {
@@ -1019,7 +1019,7 @@ let state = {
           "category": "Esportes",
           "badge": "58% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_745785-MLA114987927277_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/bicicleta-ergometrica-bike-spinning-6kg-sensacao-inercia-fitness-preto-e-vermelho-sevenfit-para-cardio/p/MLB42978348?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7723793010&sid=affiliates",
+          "link": "https://meli.la/1wR1Y5w",
           "clicks": 0
         },
 {
@@ -1030,7 +1030,7 @@ let state = {
           "category": "Esportes",
           "badge": "64% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_810036-MLB116554901386_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/bicicleta-ergometrica-bike-spinning-academia-fitness-ginastica-roda-inercia-8kg-its-profissional-aparelho-cardio-treino-em-casa-vertical-residencial/up/MLBU2773158265?pdp_filters=item_id%3AMLB4960274918&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4960274918&sid=affiliates",
+          "link": "https://meli.la/24e8xH7",
           "clicks": 0
         },
 {
@@ -1041,7 +1041,7 @@ let state = {
           "category": "Esportes",
           "badge": "56% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_608162-MLA112813208483_062026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/proteina-max-titanium-whey-pro-concetrado-em-po-sabor-morango-x-1kg/p/MLB6087971?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5456928122&sid=affiliates",
+          "link": "https://meli.la/22Zj4Xw",
           "clicks": 0
         },
 {
@@ -1052,7 +1052,7 @@ let state = {
           "category": "Esportes",
           "badge": "58% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_613019-MLB116795899587_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/garrafa-termica-800ml-inox-bico-duplo-canudo-alca-esporte/up/MLBU4840001294?pdp_filters=item_id%3AMLB5090897391&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5090897391&sid=affiliates",
+          "link": "https://meli.la/2YxBfLU",
           "clicks": 0
         },
 {
@@ -1063,7 +1063,7 @@ let state = {
           "category": "Esportes",
           "badge": "49% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_834022-MLB115540972291_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/copo-termico-inox-com-canudo-e-tampa-grande-1200ml-12litros/up/MLBU4578810048?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4988308931&sid=affiliates",
+          "link": "https://meli.la/1gvT9wA",
           "clicks": 0
         },
 {
@@ -1074,7 +1074,7 @@ let state = {
           "category": "Esportes",
           "badge": "54% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_736304-MLA84850918113_052025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-halteres-3-em-1-peso-musculacao-ate-20kg-ajustavel-preto-cor-preto-amarelo/p/MLB29448500?pdp_filters=item_id%3AMLB4265999243&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4265999243&sid=affiliates",
+          "link": "https://meli.la/2599HG6",
           "clicks": 0
         },
 {
@@ -1085,7 +1085,7 @@ let state = {
           "category": "Esportes",
           "badge": "47% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_782318-MLB116097715296_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-500-anzois-aco-carbono-3-ao-12-caixa-anzol-chinu-pesca/up/MLBU3896650899?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4608072475&sid=affiliates",
+          "link": "https://meli.la/1ZEkHFL",
           "clicks": 0
         },
 {
@@ -1096,7 +1096,7 @@ let state = {
           "category": "Esportes",
           "badge": "47% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_789750-MLB114582073186_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/garrafa-termica-800ml-agua-azarte-inox-academia-com-alca/up/MLBU4068790325?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6938015312&sid=affiliates",
+          "link": "https://meli.la/2YKRsDB",
           "clicks": 0
         },
 {
@@ -1107,7 +1107,7 @@ let state = {
           "category": "Esportes",
           "badge": "51% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_879721-MLB115920850639_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/copo-termico-gigante-12l-inox-com-tampa-inox-canudo-escova/up/MLBU4689539388?pdp_filters=item_id%3AMLB5036716671&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5036716671&sid=affiliates",
+          "link": "https://meli.la/2rJnNNL",
           "clicks": 0
         },
 {
@@ -1118,7 +1118,7 @@ let state = {
           "category": "Esportes",
           "badge": "43% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_779139-MLA115894400855_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/bicicleta-scooter-eletrica-xplore-48v-12ah-500w-sem-cnh-preto/p/MLB54428983?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7789188162&sid=affiliates",
+          "link": "https://meli.la/1GSSZBK",
           "clicks": 0
         },
 {
@@ -1129,7 +1129,7 @@ let state = {
           "category": "Esportes",
           "badge": "50% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_977441-MLB112202816401_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/chuteira-campo-striker-nova-adulto-trava-original-uzze/up/MLBU3803480886?pdp_filters=item_id%3AMLB6259217286&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6259217286&sid=affiliates",
+          "link": "https://meli.la/1NFrdAN",
           "clicks": 0
         },
 {
@@ -1140,7 +1140,7 @@ let state = {
           "category": "Esportes",
           "badge": "44% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_850696-MLA99470524832_112025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/creatina-integralmedica-monohidratada-hardcore-em-po-sabor-limao-x-350g/p/MLB52934752?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5521064114&sid=affiliates",
+          "link": "https://meli.la/24jZw5e",
           "clicks": 0
         },
 {
@@ -1151,7 +1151,7 @@ let state = {
           "category": "Esportes",
           "badge": "50% OFF com Cupom",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_853109-MLA110090526628_042026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/raquete-beach-tennis-adidas-bt-30-fiberglass-24-furos-cor-azullima/p/MLB68755492?pdp_filters=item_id%3AMLB7662144706&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB7662144706&sid=affiliates",
+          "link": "https://meli.la/1AYPUv7",
           "clicks": 0
         },
 {
@@ -1162,7 +1162,7 @@ let state = {
           "category": "Esportes",
           "badge": "38% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_812560-MLB101614500393_122025-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-4018952355-cinto-de-hidrataco-com-2x-garrafinhas-para-corrida-pochete-_JM?searchVariation=183257725938&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/1d2buB6",
           "clicks": 0
         },
 {
@@ -1173,7 +1173,7 @@ let state = {
           "category": "Esportes",
           "badge": "38% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_917939-MLA115026330219_072026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/1000ml-garrafa-termica-isolada-a-vacuo-squeeze-aco-inox-304-para-agua-gelada-esporte-academia-com-alca-e-bico-preto-solar/p/MLB37798840?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5204254915&sid=affiliates",
+          "link": "https://meli.la/2EdBmH1",
           "clicks": 0
         },
 {
@@ -1184,7 +1184,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "75% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_956285-MLA115392782062_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/parafusadeira-furadeira-impacto-sem-fio-2-baterias-recarregavel-48v-bivolt-velocidade-ajustavel-com-travas-mandril-resistente-woosh/p/MLB64896669?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7529392590&sid=affiliates",
+          "link": "https://meli.la/2ZRFVjj",
           "clicks": 0
         },
 {
@@ -1195,7 +1195,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "73% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_619610-MLB115078296414_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/conjunto-3-mangueiras-manifold-90cm-14-sae-r22-r410a-preta/up/MLBU4840475425?pdp_filters=item_id%3AMLB5097533895&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5097533895&sid=affiliates",
+          "link": "https://meli.la/2FrBmEF",
           "clicks": 0
         },
 {
@@ -1206,7 +1206,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "66% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_637618-MLA109832243653_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/compressor-de-ar-digital-mini-portatil-sem-fio-para-carro-moto-e-bicicleta/p/MLB67406789?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB6756694794&sid=affiliates",
+          "link": "https://meli.la/2b4h6wY",
           "clicks": 0
         },
 {
@@ -1217,7 +1217,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "70% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_687486-MLB116695830475_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/pistola-de-pintura-eletrica-pulverizador-tinta-650w-25mm-1l/up/MLBU4855685941?pdp_filters=item_id%3AMLB5103000009&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB5103000009&sid=affiliates",
+          "link": "https://meli.la/2Xjzt4E",
           "clicks": 0
         },
 {
@@ -1228,7 +1228,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "64% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_990578-MLB116297130130_092026-AB.webp",
-          "link": "https://produto.mercadolivre.com.br/MLB-5247361245-bolsa-mala-de-ferramentas-14-pol-lona-1200d-para-soldador-_JM?searchVariation=207254261223&extra_comm=false&brand_comm=false#polycard_client=affiliates&sid=affiliates",
+          "link": "https://meli.la/2FJjzi7",
           "clicks": 0
         },
 {
@@ -1239,7 +1239,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "61% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_659159-MLA115943043890_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/pulverizador-manual-pressurizado-15l-laranja-bico-regulavel-para-jardim-plantas-limpeza-automotiva-carro-casa-multiuso-pulverizacao-portatil-ajustavel/p/MLB79105281?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7612922910&sid=affiliates",
+          "link": "https://meli.la/2ZjMYgR",
           "clicks": 0
         },
 {
@@ -1250,7 +1250,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "59% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_735695-MLA115344585020_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/gravador-eletrico-vonder-grv-7000-para-metal-vidro-madeira-plastico/p/MLB19589299?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4728669465&sid=affiliates",
+          "link": "https://meli.la/13E3U3U",
           "clicks": 0
         },
 {
@@ -1261,7 +1261,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "65% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_951617-MLB110943565198_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/parafusadeira-furadeira-48v-profissional-2-baterias-sem-fio/up/MLBU3584842699?pdp_filters=item_id%3AMLB4317803385&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4317803385&sid=affiliates",
+          "link": "https://meli.la/1rYSDmu",
           "clicks": 0
         },
 {
@@ -1272,7 +1272,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "63% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_930950-MLA112720924866_062026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/mini-motosserra-a-bateria-portatil-brushless-1000w-bivolt-2-baterias/p/MLB69963808?pdp_filters=item_id%3AMLB6798898872&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6798898872&sid=affiliates",
+          "link": "https://meli.la/2PbF6wg",
           "clicks": 0
         },
 {
@@ -1283,7 +1283,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "57% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_681126-MLA115545993062_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/lavadora-de-alta-pressao-krcher-compacta-1500-psilibras-1400w-300lh-com-aplicador-de-detergente-e-lanca-regulavel-220v/p/MLB25371983?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5166439747&sid=affiliates",
+          "link": "https://meli.la/2CXDf8T",
           "clicks": 0
         },
 {
@@ -1294,7 +1294,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "60% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_970164-MLB111591957617_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/lavadora-portatil-lava-jato-de-alta-pressao-2-baterias/up/MLBU3860709927?pdp_filters=item_id%3AMLB6520152032&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6520152032&sid=affiliates",
+          "link": "https://meli.la/1fcTtiT",
           "clicks": 0
         },
 {
@@ -1305,7 +1305,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "58% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_785124-MLA101684683842_122025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/lavadora-a-jato-de-alta-pressao-portatil-recarregavel-2-baterias-com-maleta-mini-eletrica-de-lavar-carro-profissional-potencia-turbo-limpeza-compacta-potente-regulavel-reservatorio-aua/p/MLB63424734?pdp_filters=item_id%3AMLB4387474155&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4387474155&sid=affiliates",
+          "link": "https://meli.la/31SJwbJ",
           "clicks": 0
         },
 {
@@ -1316,7 +1316,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "51% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_600016-MLB114241510818_082026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/corrente-motosserra-para-stihl-ms-170-38-22-dentes-11m/p/MLB2039946931?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB5067243188&sid=affiliates",
+          "link": "https://meli.la/1XJpRrz",
           "clicks": 0
         },
 {
@@ -1327,7 +1327,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "52% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_893170-MLA112240875152_062026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/chave-catraca-canhao-cachimbo-46-pecas-vermelha-4-14mm/p/MLB34810640?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4755668279&sid=affiliates",
+          "link": "https://meli.la/2tmYWWB",
           "clicks": 0
         },
 {
@@ -1338,7 +1338,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "51% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_874245-MLA105016034893_012026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/maquina-solda-inversora-mma-the-black-tools-preto-5060hz-voltagem/p/MLB21362130?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB7761058060&sid=affiliates",
+          "link": "https://meli.la/1M6yqwN",
           "clicks": 0
         },
 {
@@ -1349,7 +1349,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "56% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_824237-MLB109003864893_032026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/bolsa-de-ferramentas-kinetx-14-pol-oxford-reforcada/up/MLBU3847085747?pdp_filters=item_id%3AMLB4541718573&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4541718573&sid=affiliates",
+          "link": "https://meli.la/2ALDzWv",
           "clicks": 0
         },
 {
@@ -1360,7 +1360,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "57% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_625289-MLA110412192372_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/lavadora-alta-pressao-portatil-recarregavel-sem-fio-bivolt-evolufix/p/MLB69323628?pdp_filters=item_id%3AMLB6737721348&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB6737721348&sid=affiliates",
+          "link": "https://meli.la/2esYX6r",
           "clicks": 0
         },
 {
@@ -1371,7 +1371,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "50% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_981459-MLA117136184907_092026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/parafusadeira-furadeira-de-impacto-the-black-tools-profissional-tb-21px-2-baterias-com-maleta-60hz-amarelo/p/MLB30144703?pdp_filters=deal%3AMLB1578289-1&extra_comm=false&brand_comm=false#polycard_client=affiliates&wid=MLB4268042659&sid=affiliates",
+          "link": "https://meli.la/2FPNguy",
           "clicks": 0
         },
 {
@@ -1382,7 +1382,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "56% OFF",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_706304-MLA110786654236_052026-AB.webp",
-          "link": "https://www.mercadolivre.com.br/kit-multi-ferramentas-4-em-1-48v-sem-fio-com-2-baterias-furadeira-parafusadeira-martelete-esmerilhadeira-chave-de-impacto-com-maleta-alta-potencia-uso-profissional-e-domestico-simake/p/MLB67462015?pdp_filters=item_id%3AMLB4576853487&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB4576853487&sid=affiliates",
+          "link": "https://meli.la/2iBpzA6",
           "clicks": 0
         },
 {
@@ -1393,7 +1393,7 @@ let state = {
           "category": "Ferramentas",
           "badge": "55% OFF no Pix",
           "image": "https://http2.mlstatic.com/D_Q_NP_2X_710675-MLB89102120983_082025-AB.webp",
-          "link": "https://www.mercadolivre.com.br/lavadora-lava-jato-portatil-pressao-2-baterias--maleta/up/MLBU605239077?pdp_filters=item_id%3AMLB3621404839&extra_comm=true&brand_comm=false#polycard_client=affiliates&wid=MLB3621404839&sid=affiliates",
+          "link": "https://meli.la/1u9wPbK",
           "clicks": 0
         }
     ],
